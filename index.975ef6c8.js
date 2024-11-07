@@ -28789,9 +28789,9 @@ const imageAltText = "desk";
  * links section. Below is a sample, update to reflect links you'd like to highlight.
  */ const projectList = [
     {
-        title: "10 Things To Know About Azure Static Web Apps \uD83C\uDF89",
-        description: "Collaboration to create a beginner friendly article to help explain Azure Static Web Apps and tooling to get started.",
-        url: "https://dev.to/azure/10-things-to-know-about-azure-static-web-apps-3n4i"
+        title: "CrewAI using Google Gemini",
+        description: "Examples of Crews using crewai.",
+        url: "https://github.com/GeorgeMyller/linkedinwriter"
     },
     {
         title: "Web Development for Beginners",
