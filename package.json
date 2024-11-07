@@ -1,7 +1,7 @@
 {
-  "name": "educator-js-codespace-template",
+  "name": "georgemyller-portfolio",
   "version": "1.0.0",
-  "description": "Educator JS Codespace Template",
+  "description": "George Myller's portfolio",
   "source": "src/index.html",
   "homepage": "http://georgemyller.github.io/portfolio",
   "scripts": {
@@ -13,12 +13,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+http://GeorgeMyller.github.io/portfolio"
+    "url": "http://GeorgeMyller.github.io/portfolio"
   },
   "author": "George Myller",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/microsoft/codespaces-teaching-template-js/issues"
+    "url": "http://GeorgeMyller.github.io/portfolio"
   },
   "dependencies": {
     "react": "^18.2.0",
