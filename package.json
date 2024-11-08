@@ -3,11 +3,11 @@
   "version": "1.0.0",
   "description": "George Myller's portfolio",
   "source": "src/index.html",
-  "homepage": "http://georgemyller.github.io/portfolio",
+  "homepage": "https://georgemyller.github.io/portfolio",
   "scripts": {
     "start": "parcel",
     "build": "parcel build",
-    "build-gh": "parcel build --public-url 'http://GeorgeMyller.github.io/portfolio'",
+    "build-gh": "parcel build --public-url 'https://georgemyller.github.io/portfolio'",
     "predeploy": "npm run build-gh",
     "deploy": "gh-pages -d dist"
   },
