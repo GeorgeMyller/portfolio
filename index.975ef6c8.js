@@ -28670,24 +28670,40 @@ const Home = ({ name , title  })=>{
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                 style: {
                     position: "absolute",
-                    top: "50%",
+                    top: "40%",
                     left: "50%",
                     transform: "translate(-50%, -50%)",
-                    color: "grey"
+                    color: "#333300",
+                    backgroundColor: "rgba(255, 255, 255, 0.8)",
+                    padding: "2rem",
+                    borderRadius: "10px",
+                    boxShadow: "0 0 10px rgba(0,0,0,0.2)",
+                    width: "80%",
+                    maxWidth: "600px"
                 },
                 children: [
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                        style: {
+                            fontSize: "6.5rem",
+                            marginBottom: "1rem",
+                            textShadow: "2px 2px 4px rgba(0,0,0,0.2)"
+                        },
                         children: name
                     }, void 0, false, {
                         fileName: "src/Components/Home.jsx",
-                        lineNumber: 32,
+                        lineNumber: 44,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
+                        style: {
+                            fontSize: "1.8rem",
+                            fontWeight: "400",
+                            textShadow: "1px 1px 2px rgba(0,0,0,0.2)"
+                        },
                         children: title
                     }, void 0, false, {
                         fileName: "src/Components/Home.jsx",
-                        lineNumber: 33,
+                        lineNumber: 49,
                         columnNumber: 9
                     }, undefined)
                 ]
@@ -28712,12 +28728,12 @@ const Home = ({ name , title  })=>{
                     alt: imageAltText
                 }, void 0, false, {
                     fileName: "src/Components/Home.jsx",
-                    lineNumber: 36,
+                    lineNumber: 56,
                     columnNumber: 9
                 }, undefined)
             }, void 0, false, {
                 fileName: "src/Components/Home.jsx",
-                lineNumber: 35,
+                lineNumber: 55,
                 columnNumber: 7
             }, undefined)
         ]
@@ -28789,24 +28805,19 @@ const imageAltText = "desk";
  * links section. Below is a sample, update to reflect links you'd like to highlight.
  */ const projectList = [
     {
-        title: "CrewAI using Google Gemini",
-        description: "Examples of Crews using crewai.",
+        title: "LinkedIn Content Writer with CrewAI & Gemini",
+        description: "A specialized AI system that combines CrewAI framework with Google's Gemini model to generate professional LinkedIn content. The project demonstrates AI agents collaboration to create engaging social media posts, leveraging advanced language models for content creation.",
         url: "https://github.com/GeorgeMyller/linkedinwriter"
     },
     {
-        title: "Web Development for Beginners",
-        description: "Contributed sketch note imagery to accompany each lesson. These help provide visual representation of what is being taught.",
-        url: "https://github.com/microsoft/web-dev-for-beginners"
+        title: "Data Analytics Portfolio",
+        description: "A comprehensive collection of data analytics projects showcasing skills in Python, data visualization, and statistical analysis. Features include exploratory data analysis (EDA), machine learning implementations, and interactive data visualizations using libraries like Pandas, NumPy, and Matplotlib.",
+        url: "https://github.com/GeorgeMyller/DataAnalytics"
     },
     {
-        title: "My Resume Site",
-        description: "Created from Microsoft's resume workshop and deployed to GitHub pages. Includes my experience and design abilities.",
-        url: "https://github.com/microsoft/workshop-library/tree/main/full/build-resume-website"
-    },
-    {
-        title: "GitHub Codespaces and github.dev",
-        description: "Video interview to explain when to use GitHub.dev versus GitHub Codespaces, and how best to use each tool.",
-        url: "https://www.youtube.com/watch?v=c3hHhRME_XI"
+        title: "Python Deep Learning Studies",
+        description: "A comprehensive repository documenting advanced Python learning journey, focusing on Deep Learning implementation. Includes practical exercises and projects covering neural networks, data preprocessing, model training, and AI fundamentals following Sandeco's course methodology.",
+        url: "https://github.com/GeorgeMyller/cursos_Sandeco"
     }, 
 ];
 const Portfolio = ()=>{
@@ -28821,7 +28832,7 @@ const Portfolio = ()=>{
                 children: "Portfolio"
             }, void 0, false, {
                 fileName: "src/Components/Portfolio.jsx",
-                lineNumber: 62,
+                lineNumber: 55,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -28846,12 +28857,12 @@ const Portfolio = ()=>{
                             alt: imageAltText
                         }, void 0, false, {
                             fileName: "src/Components/Portfolio.jsx",
-                            lineNumber: 65,
+                            lineNumber: 58,
                             columnNumber: 11
                         }, undefined)
                     }, void 0, false, {
                         fileName: "src/Components/Portfolio.jsx",
-                        lineNumber: 64,
+                        lineNumber: 57,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -28870,12 +28881,12 @@ const Portfolio = ()=>{
                                             children: project.title
                                         }, void 0, false, {
                                             fileName: "src/Components/Portfolio.jsx",
-                                            lineNumber: 75,
+                                            lineNumber: 68,
                                             columnNumber: 17
                                         }, undefined)
                                     }, void 0, false, {
                                         fileName: "src/Components/Portfolio.jsx",
-                                        lineNumber: 74,
+                                        lineNumber: 67,
                                         columnNumber: 15
                                     }, undefined),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
@@ -28883,30 +28894,30 @@ const Portfolio = ()=>{
                                         children: project.description
                                     }, void 0, false, {
                                         fileName: "src/Components/Portfolio.jsx",
-                                        lineNumber: 77,
+                                        lineNumber: 70,
                                         columnNumber: 15
                                     }, undefined)
                                 ]
                             }, project.title, true, {
                                 fileName: "src/Components/Portfolio.jsx",
-                                lineNumber: 73,
+                                lineNumber: 66,
                                 columnNumber: 13
                             }, undefined))
                     }, void 0, false, {
                         fileName: "src/Components/Portfolio.jsx",
-                        lineNumber: 71,
+                        lineNumber: 64,
                         columnNumber: 9
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/Components/Portfolio.jsx",
-                lineNumber: 63,
+                lineNumber: 56,
                 columnNumber: 7
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/Components/Portfolio.jsx",
-        lineNumber: 61,
+        lineNumber: 54,
         columnNumber: 5
     }, undefined);
 };
