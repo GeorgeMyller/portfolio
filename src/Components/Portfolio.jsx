@@ -31,29 +31,22 @@ const imageAltText = "desk";
  */
 const projectList = [
   {
-    title: "CrewAI using Google Gemini",
+    title: "LinkedIn Content Writer with CrewAI & Gemini",
     description:
-    "Examples of Crews using crewai.",
+    "A specialized AI system that combines CrewAI framework with Google's Gemini model to generate professional LinkedIn content. The project demonstrates AI agents collaboration to create engaging social media posts, leveraging advanced language models for content creation.",
     url: "https://github.com/GeorgeMyller/linkedinwriter",
   },
   {
-    title: "Web Development for Beginners",
-    description:
-      "Contributed sketch note imagery to accompany each lesson. These help provide visual representation of what is being taught.",
-    url: "https://github.com/microsoft/web-dev-for-beginners",
+    title: "Data Analytics Portfolio",
+    description: "A comprehensive collection of data analytics projects showcasing skills in Python, data visualization, and statistical analysis. Features include exploratory data analysis (EDA), machine learning implementations, and interactive data visualizations using libraries like Pandas, NumPy, and Matplotlib.",
+    url: "https://github.com/GeorgeMyller/DataAnalytics",
   },
   {
-    title: "My Resume Site",
-    description:
-      "Created from Microsoft's resume workshop and deployed to GitHub pages. Includes my experience and design abilities.",
-    url: "https://github.com/microsoft/workshop-library/tree/main/full/build-resume-website",
+    title: "Python Deep Learning Studies",
+    description: "A comprehensive repository documenting advanced Python learning journey, focusing on Deep Learning implementation. Includes practical exercises and projects covering neural networks, data preprocessing, model training, and AI fundamentals following Sandeco's course methodology.",
+    url: "https://github.com/GeorgeMyller/cursos_Sandeco",
   },
-  {
-    title: "GitHub Codespaces and github.dev",
-    description:
-      "Video interview to explain when to use GitHub.dev versus GitHub Codespaces, and how best to use each tool.",
-    url: "https://www.youtube.com/watch?v=c3hHhRME_XI",
-  },
+  
 ];
 
 const Portfolio = () => {

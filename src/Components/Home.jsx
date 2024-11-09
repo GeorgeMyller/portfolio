@@ -28,9 +28,29 @@ const Home = ({ name, title }) => {
   return (
     <section id="home" className="min-height" style={{ position: "relative", textAlign: "center" }}>
       <img className="background" src={image} alt="" style={{ width: "100%", height: "auto" }} />
-      <div style={{ position: "absolute", top: "50%", left: "50%", transform: "translate(-50%, -50%)", color: "grey" }}>
-        <h1>{name}</h1>
-        <h2>{title}</h2>
+      <div style={{ 
+        position: "absolute", 
+        top: "40%", // Moved up slightly from center
+        left: "50%", 
+        transform: "translate(-50%, -50%)", 
+        color: "#333300",
+        backgroundColor: "rgba(255, 255, 255, 0.8)", // Semi-transparent white background
+        padding: "2rem",
+        borderRadius: "10px",
+        boxShadow: "0 0 10px rgba(0,0,0,0.2)",
+        width: "80%",
+        maxWidth: "600px"
+      }}>
+        <h1 style={{ 
+          fontSize: "6.5rem",
+          marginBottom: "1rem",
+          textShadow: "2px 2px 4px rgba(0,0,0,0.2)"
+        }}>{name}</h1>
+        <h2 style={{
+          fontSize: "1.8rem",
+          fontWeight: "400",
+          textShadow: "1px 1px 2px rgba(0,0,0,0.2)"
+        }}>{title}</h2>
       </div>
       <div style={{ position: "absolute", bottom: "3rem", left: "50%", transform: "translateX(-50%)" }}>
         <img src={arrowSvg} style={{ height: "3rem", width: "3rem" }} alt={imageAltText} />
