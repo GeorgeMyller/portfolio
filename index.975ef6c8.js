@@ -27117,8 +27117,8 @@ var _stylesCss = require("./styles.css");
     instagram: "@georgemyller ",
     linkedIn: "https://www.linkedin.com/in/george-m-souza"
 };
-const primaryColor = "#D2F1E4";
-const secondaryColor = "#D2F1E4";
+const primaryColor = "grey";
+const secondaryColor = "grey";
 const App = ()=>{
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         id: "main",
@@ -28958,8 +28958,6 @@ const imageAltText = "desk"; // Alt text for the image
 };
 _c = Portfolio;
 exports.default = Portfolio; // Export the Portfolio component
-// Improved phrase
-const improvedPhrase = "With a strong background in Python, data analysis, and AI agents, I am constantly seeking new opportunities to expand my knowledge and grow professionally.";
 var _c;
 $RefreshReg$(_c, "Portfolio");
 
