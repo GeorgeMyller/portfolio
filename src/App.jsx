@@ -33,8 +33,8 @@ const siteProps = {
 
 };
 
-const primaryColor = "#D2F1E4";
-const secondaryColor = "#D2F1E4";
+const primaryColor = "grey";
+const secondaryColor = "grey";
 
 const App = () => {
   return (
