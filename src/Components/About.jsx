@@ -24,7 +24,7 @@ const imageAltText = "background";
  * Sort description that expands on your title on the Home component.
  */
 const description =
-  "I'm a AI student. I enjoy creating AI Agents.";
+  "I am passionate about solving problems in new creative ways to drive innovation..";
 
 /**
  * List of some of skills or technologies you work on, are learning,
@@ -45,7 +45,7 @@ const skillsList = [
  * about you on a professional level.
  */
 const detailOrQuote =
-  "I am passionate about solving problems in new creative ways to drive innovation.";
+  "With a background in Python, data analysis, and AI agents. I am always looking for new opportunities to learn and grow.";
 
 const About = () => {
   return (
@@ -53,8 +53,9 @@ const About = () => {
       <img className="background" src={image} alt={imageAltText} />
       <div
         style={{
-          backgroundColor: "white",
-          width: "50%",
+          backgroundColor: "#fff",
+          opacity: [0.8],
+          width: "60%",
           padding: "4rem",
           margin: "3rem auto",
           textAlign: "center",
@@ -65,11 +66,11 @@ const About = () => {
         <hr />
         <ul
           style={{
-            textAlign: "left",
+            textAlign: "center",
             columns: 2,
             fontSize: "1.25rem",
-            margin: "2rem 3rem",
-            gap: "3rem",
+            margin: "0rem 0.2rem",
+            gap: "2rem",
           }}
         >
           {skillsList.map((skill) => (

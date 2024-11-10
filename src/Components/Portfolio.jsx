@@ -155,3 +155,6 @@ const Portfolio = () => {
 };
 
 export default Portfolio; // Export the Portfolio component
+
+// Improved phrase
+const improvedPhrase = "With a strong background in Python, data analysis, and AI agents, I am constantly seeking new opportunities to expand my knowledge and grow professionally.";
