@@ -26,34 +26,74 @@ const imageAltText = "";
 
 const Home = ({ name, title }) => {
   return (
-    <section id="home" className="min-height" style={{ position: "relative", textAlign: "center" }}>
-      <img className="background" src={image} alt="" style={{ width: "100%", height: "auto" }} />
-      <div style={{ 
-        position: "absolute", 
-        top: "40%", // Moved up slightly from center
-        left: "50%", 
-        transform: "translate(-50%, -50%)", 
-        color: "#333300",
-        backgroundColor: "rgba(255, 255, 255, 0.8)", // Semi-transparent white background
-        padding: "2rem",
-        borderRadius: "10px",
-        boxShadow: "0 0 10px rgba(0,0,0,0.2)",
-        width: "80%",
-        maxWidth: "600px"
-      }}>
-        <h1 style={{ 
-          fontSize: "6.5rem",
-          marginBottom: "1rem",
-          textShadow: "2px 2px 4px rgba(0,0,0,0.2)"
-        }}>{name}</h1>
-        <h2 style={{
-          fontSize: "1.8rem",
-          fontWeight: "400",
-          textShadow: "1px 1px 2px rgba(0,0,0,0.2)"
-        }}>{title}</h2>
+    <section
+      id="home"
+      style={{
+        position: "relative",
+        textAlign: "center",
+        overflow: "hidden",
+      }}
+    >
+      <img
+        src={image}
+        alt={imageAltText}
+        style={{
+          width: "100%",
+          height: "100vh",
+          objectFit: "cover",
+          objectPosition: "center",
+        }}
+      />
+      <div
+        style={{
+          position: "absolute",
+          top: "30%",
+          left: "50%",
+          transform: "translate(-50%, -50%)",
+          color: "#333300",
+          backgroundColor: "rgba(255, 255, 255, 0.85)",
+          padding: "clamp(1rem, 5vw, 2.5rem)",
+          borderRadius: "12px",
+          width: "clamp(280px, 80%, 800px)",
+          maxWidth: "90vw",
+        }}
+      >
+        <h1
+          style={{
+            fontSize: "clamp(2rem, 8vw, 6.5rem)",
+            marginBottom: "clamp(0.5rem, 2vw, 1rem)",
+            textShadow: "2px 2px 4px rgba(0,0,0,0.2)",
+            wordWrap: "break-word",
+          }}
+        >
+          {name}
+        </h1>
+        <h2
+          style={{
+            fontSize: "clamp(1rem, 4vw, 1.8rem)",
+            fontWeight: "400",
+            textShadow: "1px 1px 2px rgba(0,0,0,0.2)",
+          }}
+        >
+          {title}
+        </h2>
       </div>
-      <div style={{ position: "absolute", bottom: "3rem", left: "50%", transform: "translateX(-50%)" }}>
-        <img src={arrowSvg} style={{ height: "3rem", width: "3rem" }} alt={imageAltText} />
+      <div
+        style={{
+          position: "absolute",
+          bottom: "clamp(1rem, 5vh, 3rem)",
+          left: "50%",
+          transform: "translateX(-50%)",
+        }}
+      >
+        <img
+          src={arrowSvg}
+          alt={imageAltText}
+          style={{
+            height: "clamp(2rem, 5vw, 3rem)",
+            width: "clamp(2rem, 5vw, 3rem)",
+          }}
+        />
       </div>
     </section>
   );
