@@ -27202,7 +27202,7 @@ var _defaultCrieUmImagemLandscapeSobreBilogiaEmTransioPar0JpgDefault = parcelHel
 const imageAltText = "background";
 /**
  * Sort description that expands on your title on the Home component.
- */ const description = "I'm a AI student. I enjoy creating AI Agents.";
+ */ const description = "I am passionate about solving problems in new creative ways to drive innovation..";
 /**
  * List of some of skills or technologies you work on, are learning,
  * passionate about, or enjoy,
@@ -27218,7 +27218,7 @@ const imageAltText = "background";
  * Use this to give more information about what you are passionate about,
  * how you best work, or even a quote. This will help someone learn more
  * about you on a professional level.
- */ const detailOrQuote = "I am passionate about solving problems in new creative ways to drive innovation.";
+ */ const detailOrQuote = "With a background in Python, data analysis, and AI agents. I am always looking for new opportunities to learn and grow.";
 const About = ()=>{
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("section", {
         className: "padding",
@@ -27235,8 +27235,11 @@ const About = ()=>{
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                 style: {
-                    backgroundColor: "white",
-                    width: "50%",
+                    backgroundColor: "#fff",
+                    opacity: [
+                        0.8
+                    ],
+                    width: "60%",
                     padding: "4rem",
                     margin: "3rem auto",
                     textAlign: "center"
@@ -27246,7 +27249,7 @@ const About = ()=>{
                         children: "About Myself"
                     }, void 0, false, {
                         fileName: "src/Components/About.jsx",
-                        lineNumber: 63,
+                        lineNumber: 64,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
@@ -27254,37 +27257,37 @@ const About = ()=>{
                         children: description
                     }, void 0, false, {
                         fileName: "src/Components/About.jsx",
-                        lineNumber: 64,
+                        lineNumber: 65,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("hr", {}, void 0, false, {
                         fileName: "src/Components/About.jsx",
-                        lineNumber: 65,
+                        lineNumber: 66,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
                         style: {
-                            textAlign: "left",
+                            textAlign: "center",
                             columns: 2,
                             fontSize: "1.25rem",
-                            margin: "2rem 3rem",
-                            gap: "3rem"
+                            margin: "0rem 0.2rem",
+                            gap: "2rem"
                         },
                         children: skillsList.map((skill)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
                                 children: skill
                             }, skill, false, {
                                 fileName: "src/Components/About.jsx",
-                                lineNumber: 76,
+                                lineNumber: 77,
                                 columnNumber: 13
                             }, undefined))
                     }, void 0, false, {
                         fileName: "src/Components/About.jsx",
-                        lineNumber: 66,
+                        lineNumber: 67,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("hr", {}, void 0, false, {
                         fileName: "src/Components/About.jsx",
-                        lineNumber: 79,
+                        lineNumber: 80,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
@@ -27294,7 +27297,7 @@ const About = ()=>{
                         children: detailOrQuote
                     }, void 0, false, {
                         fileName: "src/Components/About.jsx",
-                        lineNumber: 80,
+                        lineNumber: 81,
                         columnNumber: 9
                     }, undefined)
                 ]
@@ -28648,92 +28651,93 @@ const imageAltText = "";
 const Home = ({ name , title  })=>{
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("section", {
         id: "home",
-        className: "min-height",
         style: {
             position: "relative",
-            textAlign: "center"
+            textAlign: "center",
+            overflow: "hidden"
         },
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                className: "background",
                 src: (0, _defaultEnterACreativeWorldWhereThePetIndustryMeetsCo0JpgDefault.default),
-                alt: "",
+                alt: imageAltText,
                 style: {
                     width: "100%",
-                    height: "auto"
+                    height: "100vh",
+                    objectFit: "cover",
+                    objectPosition: "center"
                 }
             }, void 0, false, {
                 fileName: "src/Components/Home.jsx",
-                lineNumber: 30,
+                lineNumber: 37,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                 style: {
                     position: "absolute",
-                    top: "40%",
+                    top: "30%",
                     left: "50%",
                     transform: "translate(-50%, -50%)",
                     color: "#333300",
-                    backgroundColor: "rgba(255, 255, 255, 0.8)",
-                    padding: "2rem",
-                    borderRadius: "10px",
-                    boxShadow: "0 0 10px rgba(0,0,0,0.2)",
-                    width: "80%",
-                    maxWidth: "600px"
+                    backgroundColor: "rgba(255, 255, 255, 0.85)",
+                    padding: "clamp(1rem, 5vw, 2.5rem)",
+                    borderRadius: "12px",
+                    width: "clamp(280px, 80%, 800px)",
+                    maxWidth: "90vw"
                 },
                 children: [
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
                         style: {
-                            fontSize: "6.5rem",
-                            marginBottom: "1rem",
-                            textShadow: "2px 2px 4px rgba(0,0,0,0.2)"
+                            fontSize: "clamp(2rem, 8vw, 6.5rem)",
+                            marginBottom: "clamp(0.5rem, 2vw, 1rem)",
+                            textShadow: "2px 2px 4px rgba(0,0,0,0.2)",
+                            wordWrap: "break-word"
                         },
                         children: name
                     }, void 0, false, {
                         fileName: "src/Components/Home.jsx",
-                        lineNumber: 44,
+                        lineNumber: 61,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
                         style: {
-                            fontSize: "1.8rem",
+                            fontSize: "clamp(1rem, 4vw, 1.8rem)",
                             fontWeight: "400",
                             textShadow: "1px 1px 2px rgba(0,0,0,0.2)"
                         },
                         children: title
                     }, void 0, false, {
                         fileName: "src/Components/Home.jsx",
-                        lineNumber: 49,
+                        lineNumber: 71,
                         columnNumber: 9
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/Components/Home.jsx",
-                lineNumber: 31,
+                lineNumber: 47,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                 style: {
                     position: "absolute",
-                    bottom: "3rem",
+                    bottom: "clamp(1rem, 5vh, 3rem)",
                     left: "50%",
                     transform: "translateX(-50%)"
                 },
                 children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
                     src: (0, _downArrowSvgDefault.default),
+                    alt: imageAltText,
                     style: {
-                        height: "3rem",
-                        width: "3rem"
-                    },
-                    alt: imageAltText
+                        height: "clamp(2rem, 5vw, 3rem)",
+                        width: "clamp(2rem, 5vw, 3rem)"
+                    }
                 }, void 0, false, {
                     fileName: "src/Components/Home.jsx",
-                    lineNumber: 56,
+                    lineNumber: 89,
                     columnNumber: 9
                 }, undefined)
             }, void 0, false, {
                 fileName: "src/Components/Home.jsx",
-                lineNumber: 55,
+                lineNumber: 81,
                 columnNumber: 7
             }, undefined)
         ]
@@ -28780,12 +28784,12 @@ var _jsxDevRuntime = require("react/jsx-dev-runtime");
 /**
  * Portfolio component
  *
- * Highlights some of  your creations. These can be designs, websites,
+ * Highlights some of your creations. These can be designs, websites,
  * open source contributions, articles you've written and more.
  *
- * This is a great area for you to to continually add to and refine
+ * This is a great area for you to continually add to and refine
  * as you continue to learn and create.
- */ var _react = require("react");
+ */ var _react = require("react"); // Import React library
 var _reactDefault = parcelHelpers.interopDefault(_react);
 /**
  * Desk image
@@ -28795,9 +28799,9 @@ var _reactDefault = parcelHelpers.interopDefault(_react);
  *
  * Need an image? Check out https://unsplash.com to download a photo you
  * freely use on your site.
- */ var _defaultYourPetReptileHasAlwaysBeenYourSourceOfInspir0Jpg = require("../images/Default_Your_pet_reptile_has_always_been_your_source_of_inspir_0.jpg");
+ */ var _defaultYourPetReptileHasAlwaysBeenYourSourceOfInspir0Jpg = require("../images/Default_Your_pet_reptile_has_always_been_your_source_of_inspir_0.jpg"); // Import image
 var _defaultYourPetReptileHasAlwaysBeenYourSourceOfInspir0JpgDefault = parcelHelpers.interopDefault(_defaultYourPetReptileHasAlwaysBeenYourSourceOfInspir0Jpg);
-const imageAltText = "desk";
+const imageAltText = "desk"; // Alt text for the image
 /**
  * Project list
  *
@@ -28820,109 +28824,142 @@ const imageAltText = "desk";
         url: "https://github.com/GeorgeMyller/cursos_Sandeco"
     }, 
 ];
-const Portfolio = ()=>{
+/**
+ * Portfolio component with centered layout
+ */ const Portfolio = ()=>{
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("section", {
-        className: "padding",
-        id: "portfolio",
+        id: "portfolio" // Section ID
+        ,
+        style: {
+            padding: "clamp(0rem, 0vw, 0rem)",
+            maxWidth: "1900px",
+            margin: "0 auto",
+            textAlign: "center"
+        },
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
                 style: {
-                    textAlign: "center"
+                    textAlign: "center",
+                    fontSize: "clamp(1.8rem, 4vw, 2.5rem)",
+                    marginBottom: "clamp(2rem, 5vw, 4rem)"
                 },
                 children: "Portfolio"
             }, void 0, false, {
                 fileName: "src/Components/Portfolio.jsx",
-                lineNumber: 55,
+                lineNumber: 67,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                 style: {
-                    display: "flex",
-                    flexDirection: "row",
-                    paddingTop: "3rem"
+                    display: "grid",
+                    gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
+                    gap: "clamp(1rem, 3vw, 2rem)",
+                    padding: "0 clamp(1rem, 3vw, 2rem)",
+                    justifyContent: "center"
                 },
-                children: [
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                children: projectList.map((project)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                         style: {
-                            maxWidth: "40%",
-                            alignSelf: "center"
+                            backgroundColor: "#ffffff",
+                            borderRadius: "12px",
+                            padding: "clamp(1rem, 3vw, 2rem)",
+                            boxShadow: "0 4px 6px rgba(0,0,0,0.8)",
+                            display: "flex",
+                            flexDirection: "column",
+                            alignItems: "left"
                         },
-                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                            src: (0, _defaultYourPetReptileHasAlwaysBeenYourSourceOfInspir0JpgDefault.default),
-                            style: {
-                                height: "90%",
-                                width: "100%",
-                                objectFit: "cover"
-                            },
-                            alt: imageAltText
-                        }, void 0, false, {
-                            fileName: "src/Components/Portfolio.jsx",
-                            lineNumber: 58,
-                            columnNumber: 11
-                        }, undefined)
-                    }, void 0, false, {
-                        fileName: "src/Components/Portfolio.jsx",
-                        lineNumber: 57,
-                        columnNumber: 9
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: "container",
-                        children: projectList.map((project)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                className: "box",
-                                children: [
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
-                                        href: project.url,
-                                        target: "_blank",
-                                        rel: "noopener noreferrer",
-                                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
-                                            style: {
-                                                flexBasis: "40px"
-                                            },
-                                            children: project.title
-                                        }, void 0, false, {
-                                            fileName: "src/Components/Portfolio.jsx",
-                                            lineNumber: 68,
-                                            columnNumber: 17
-                                        }, undefined)
-                                    }, void 0, false, {
-                                        fileName: "src/Components/Portfolio.jsx",
-                                        lineNumber: 67,
-                                        columnNumber: 15
-                                    }, undefined),
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                                        className: "small",
-                                        children: project.description
-                                    }, void 0, false, {
-                                        fileName: "src/Components/Portfolio.jsx",
-                                        lineNumber: 70,
-                                        columnNumber: 15
-                                    }, undefined)
-                                ]
-                            }, project.title, true, {
+                        children: [
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
+                                style: {
+                                    fontSize: "clamp(1.5rem, 2.5vw, 1.6rem)",
+                                    marginBottom: "1rem"
+                                },
+                                children: project.title
+                            }, void 0, false, {
                                 fileName: "src/Components/Portfolio.jsx",
-                                lineNumber: 66,
+                                lineNumber: 98,
                                 columnNumber: 13
-                            }, undefined))
-                    }, void 0, false, {
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                style: {
+                                    fontSize: "clamp(1rem, 1.8vw, 1.1rem)",
+                                    lineHeight: 1.6,
+                                    flex: 1,
+                                    marginBottom: "1.5rem"
+                                },
+                                children: project.description
+                            }, void 0, false, {
+                                fileName: "src/Components/Portfolio.jsx",
+                                lineNumber: 106,
+                                columnNumber: 13
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
+                                href: project.url,
+                                target: "_blank" // Open link in new tab
+                                ,
+                                rel: "noopener noreferrer" // Security measure
+                                ,
+                                style: {
+                                    display: "inline-block",
+                                    padding: "0.8rem 1.2rem",
+                                    backgroundColor: "#007bff",
+                                    color: "white",
+                                    textDecoration: "none",
+                                    borderRadius: "6px",
+                                    textAlign: "center",
+                                    fontSize: "clamp(0.9rem, 1.5vw, 1rem)"
+                                },
+                                children: "View Project"
+                            }, void 0, false, {
+                                fileName: "src/Components/Portfolio.jsx",
+                                lineNumber: 116,
+                                columnNumber: 13
+                            }, undefined)
+                        ]
+                    }, project.title, true, {
                         fileName: "src/Components/Portfolio.jsx",
-                        lineNumber: 64,
-                        columnNumber: 9
-                    }, undefined)
-                ]
-            }, void 0, true, {
+                        lineNumber: 86,
+                        columnNumber: 11
+                    }, undefined))
+            }, void 0, false, {
                 fileName: "src/Components/Portfolio.jsx",
-                lineNumber: 56,
+                lineNumber: 76,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                style: {
+                    maxWidth: "clamp(300px, 90%, 1200px)",
+                    margin: "3rem auto 0"
+                },
+                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                    src: (0, _defaultYourPetReptileHasAlwaysBeenYourSourceOfInspir0JpgDefault.default),
+                    alt: imageAltText,
+                    style: {
+                        width: "90%",
+                        height: "auto",
+                        borderRadius: "12px",
+                        objectFit: "cover"
+                    }
+                }, void 0, false, {
+                    fileName: "src/Components/Portfolio.jsx",
+                    lineNumber: 142,
+                    columnNumber: 9
+                }, undefined)
+            }, void 0, false, {
+                fileName: "src/Components/Portfolio.jsx",
+                lineNumber: 136,
                 columnNumber: 7
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/Components/Portfolio.jsx",
-        lineNumber: 54,
+        lineNumber: 58,
         columnNumber: 5
     }, undefined);
 };
 _c = Portfolio;
-exports.default = Portfolio;
+exports.default = Portfolio; // Export the Portfolio component
+// Improved phrase
+const improvedPhrase = "With a strong background in Python, data analysis, and AI agents, I am constantly seeking new opportunities to expand my knowledge and grow professionally.";
 var _c;
 $RefreshReg$(_c, "Portfolio");
 
