@@ -9,6 +9,7 @@
  */
 
 import React from "react";
+import { useLanguage } from "../i18n";
 
 /**
  * Desk image
@@ -83,14 +84,28 @@ const projectList = [
  
 ];
 
+
 const Portfolio = () => {
+  const { t, language, setLanguage } = useLanguage();
   return (
     <section className="padding" id="portfolio">
-      <h2 style={{ textAlign: "center" }}>Portfolio</h2>
+      {/* Language Selector */}
+      <div style={{ display: "flex", justifyContent: "flex-end", marginBottom: "1rem" }}>
+        <select
+          value={language}
+          onChange={e => setLanguage(e.target.value)}
+          style={{ padding: "0.3rem 0.7rem", borderRadius: 4, border: "1px solid #ccc" }}
+          aria-label="Select language"
+        >
+          <option value="pt-BR">Português</option>
+          <option value="en">English</option>
+        </select>
+      </div>
+      <h2 style={{ textAlign: "center" }}>{t("portfolioTitle")}</h2>
       <div className="container portfolio-grid">
         {projectList.map((project) => (
           <div className="box project-card" key={project.title}>
-            <a href={project.url} target="_blank" rel="noopener noreferrer" aria-label={`Ver código de ${project.title}`}>
+            <a href={project.url} target="_blank" rel="noopener noreferrer" aria-label={`${t("projectBtnCode")} ${project.title}`}>
               <img src={project.image} alt={`Imagem do projeto ${project.title}`} className="project-image" loading="lazy" />
               <h3>{project.title}</h3>
             </a>
@@ -101,9 +116,9 @@ const Portfolio = () => {
               ))}
             </div>
             <div className="project-links">
-              <a href={project.url} target="_blank" rel="noopener noreferrer" className="project-btn">Ver código</a>
+              <a href={project.url} target="_blank" rel="noopener noreferrer" className="project-btn">{t("projectBtnCode")}</a>
               {project.demo && (
-                <a href={project.demo} target="_blank" rel="noopener noreferrer" className="project-btn">Demo</a>
+                <a href={project.demo} target="_blank" rel="noopener noreferrer" className="project-btn">{t("projectBtnDemo")}</a>
               )}
             </div>
           </div>
@@ -112,7 +127,7 @@ const Portfolio = () => {
       {/* CTA Section */}
       <div style={{ display: "flex", justifyContent: "center", marginTop: "2rem" }}>
         <a
-          href="mailto:george.myller@ua.pt" // Substitua pelo seu e-mail ou link de contato
+          href={t("contactMail")}
           className="cta-btn"
           style={{
             background: "#007bff",
@@ -126,7 +141,7 @@ const Portfolio = () => {
             transition: "background 0.2s",
           }}
         >
-          Fale comigo
+          {t("contactButton")}
         </a>
       </div>
       <div style={{ display: "flex", justifyContent: "center", paddingTop: "3rem" }}>
