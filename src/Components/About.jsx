@@ -76,7 +76,26 @@ const About = () => {
       >
         <h2 tabIndex="0">Sobre Mim</h2>
         <p className="large">{description}</p>
-        
+        {/* <a
+          href="/curriculo.pdf"
+          download
+          style={{
+            display: "inline-block",
+            margin: "1rem 0",
+            padding: "0.5rem 1.5rem",
+            background: "#6c63ff",
+            color: "#fff",
+            borderRadius: "8px",
+            textDecoration: "none",
+            fontWeight: "bold",
+            fontSize: "1rem",
+            boxShadow: "0 1px 4px rgba(0,0,0,0.08)",
+            transition: "background 0.2s",
+          }}
+          aria-label="Baixar currículo em PDF"
+        >
+          Baixar Currículo
+        </a> */}
         <hr />
         <ul
           style={{
