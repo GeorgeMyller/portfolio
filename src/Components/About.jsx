@@ -50,8 +50,17 @@ const detailOrQuote =
 
 const About = () => {
   return (
-    <section className="padding" id="about">
-      <img className="background" src={image} alt={imageAltText} />
+    <section
+      className="padding"
+      id="about"
+      style={{
+        backgroundImage: `url(${image})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+        position: "relative",
+      }}
+    >
       <div
         style={{
           backgroundColor: "var(--card-bg, white)",
