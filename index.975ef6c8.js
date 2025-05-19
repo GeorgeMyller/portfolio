@@ -29192,6 +29192,38 @@ const Portfolio = ()=>{
                 style: {
                     display: "flex",
                     justifyContent: "center",
+                    marginTop: "2rem"
+                },
+                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
+                    href: "mailto:george.myller@ua.pt" // Substitua pelo seu e-mail ou link de contato
+                    ,
+                    className: "cta-btn",
+                    style: {
+                        background: "#007bff",
+                        color: "#fff",
+                        padding: "1rem 2.5rem",
+                        borderRadius: "6px",
+                        fontSize: "1.2rem",
+                        fontWeight: "bold",
+                        textDecoration: "none",
+                        boxShadow: "0 2px 8px rgba(0,0,0,0.08)",
+                        transition: "background 0.2s"
+                    },
+                    children: "Fale comigo"
+                }, void 0, false, {
+                    fileName: "src/Components/Portfolio.jsx",
+                    lineNumber: 114,
+                    columnNumber: 9
+                }, undefined)
+            }, void 0, false, {
+                fileName: "src/Components/Portfolio.jsx",
+                lineNumber: 113,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                style: {
+                    display: "flex",
+                    justifyContent: "center",
                     paddingTop: "3rem"
                 },
                 children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
@@ -29205,12 +29237,12 @@ const Portfolio = ()=>{
                     alt: imageAltText
                 }, void 0, false, {
                     fileName: "src/Components/Portfolio.jsx",
-                    lineNumber: 113,
+                    lineNumber: 133,
                     columnNumber: 9
                 }, undefined)
             }, void 0, false, {
                 fileName: "src/Components/Portfolio.jsx",
-                lineNumber: 112,
+                lineNumber: 132,
                 columnNumber: 7
             }, undefined)
         ]
