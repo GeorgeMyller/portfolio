@@ -10,7 +10,8 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-
+import devDotToIcon from "../images/socials/devdotto.svg";
+import envelopeIcon from "../images/socials/envelope.svg";
 import gitHubIcon from "../images/socials/github.svg";
 import instagramIcon from "../images/socials/instagram.svg";
 import linkedInIcon from "../images/socials/linkedin.svg";
@@ -26,10 +27,12 @@ import youTubeIcon from "../images/socials/youtube.svg";
 
 const Footer = (props) => {
   const {
+    devDotTo,
     email,
     gitHub,
     instagram,
     linkedIn,
+    medium,
     name,
     primaryColor,
     twitter,

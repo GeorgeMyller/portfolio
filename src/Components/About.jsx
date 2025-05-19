@@ -24,7 +24,7 @@ const imageAltText = "purple and blue abstract background";
  * Sort description that expands on your title on the Home component.
  */
 const description =
-  "I'm a AI Agent Developer with a passion for creating innovative solutions that enhance user experiences. With a background in Python, I strive to make technology accessible and engaging for everyone.";
+  "I'm a AI Agent Developer with a passion for creating innovative solutions that enhance user experiences. With a background in Python and Data Analysis, I strive to make technology accessible and engaging for everyone.";
 
 /**
  * List of some of skills or technologies you work on, are learning,
