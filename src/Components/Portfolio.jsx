@@ -31,26 +31,29 @@ const imageAltText = "desktop with books and laptop";
  */
 const projectList = [
   {
-    title: "crews",
-    description: "Agents with CrewAI",
-    url: "https://github.com/GeorgeMyller/crews",
+    title: "groups_evo_crewai-escolher-envio-para-grupo-ou-para-meu-numero",
+    description: "Bot para resumir mensagens de grupos do WhatsApp e permitir o envio para o grupo ou número pessoal usando CrewAI.",
+    url: "https://github.com/GeorgeMyller/groups_evo_crewai-escolher-envio-para-grupo-ou-para-meu-numero",
   },
   {
-    title: "curso-Python-DSA",
-    description: "Atividades desenvolvidas no curso da DSA",
-    url: "https://github.com/GeorgeMyller/curso-Python-DSA",
+    title: "move_to_ssd",
+    description: "Script Python para migrar pastas e aplicativos do macOS para SSD externo com symlinks automáticos.",
+    url: "https://github.com/GeorgeMyller/move_to_ssd",
   },
-  {
-    title: "DataAnalytics",
-    description: "Repository of my start on Data Analytics",
-    url: "https://github.com/GeorgeMyller/DataAnalytics",
-  },
- 
-  
   {
     title: "agenteinstagram",
-    description: "",
+    description: "Agente automatizado para postagens no Instagram com criação de legendas automaticas e postagem do conteúdo.",
     url: "https://github.com/GeorgeMyller/agenteinstagram",
+  },
+  {
+    title: "webscraping",
+    description: "Scripts em Python para extração e análise de dados de páginas web usando bibliotecas de scraping.",
+    url: "https://github.com/GeorgeMyller/webscraping",
+  },
+  {
+    title: "linkedinwriter",
+    description: "Ferramenta para automação de criação de conteúdo e postagens no LinkedIn.",
+    url: "https://github.com/GeorgeMyller/linkedinwriter",
   },
 ];
 
