@@ -33,6 +33,7 @@ section.padding {
   padding: 5rem 0;
 }
 
+
 section img.background {
   position: absolute;
   top: 0;
@@ -43,15 +44,18 @@ section img.background {
   transform: translateX(-50%);
   z-index: -1;
   pointer-events: none;
-  opacity: 0.85;
+  opacity: 1;
+  filter: none;
+  transition: opacity 0.3s, filter 0.3s;
 }
 
 section#about img.background {
-  filter: blur(2px) brightness(0.7);
+  filter: brightness(0.85);
+  opacity: 0.95;
 }
 
 section#about > div {
-  background: rgba(255,255,255,0.92);
+  background: rgba(255,255,255,0.52);
 }
 
 h1 {

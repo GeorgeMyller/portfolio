@@ -24,20 +24,19 @@ const imageAltText = "purple and blue abstract background";
  * Sort description that expands on your title on the Home component.
  */
 const description =
-  "I'm a AI Agent Developer with a passion for creating innovative solutions that enhance user experiences. With a background in Python and Data Analysis, I strive to make technology accessible and engaging for everyone.";
+  "Sou desenvolvedor de Agentes de IA, apaixonado por criar soluções inovadoras que transformam experiências digitais. Com forte atuação em Python, análise de dados e machine learning, busco tornar a tecnologia acessível, ética e impactante para todos.";
 
 /**
  * List of some of skills or technologies you work on, are learning,
  * passionate about, or enjoy,
  */
 const skillsList = [
-  "AI Agent Development",
-  "Data analysis",
-  "Python programming",
-  "AI and machine learning",
-  "Natural language processing",
-  "Web development",
-  
+  { name: "Desenvolvimento de Agentes de IA", icon: "🤖" },
+  { name: "Análise de Dados", icon: "📊" },
+  { name: "Programação Python", icon: "🐍" },
+  { name: "Machine Learning", icon: "🧠" },
+  { name: "Processamento de Linguagem Natural", icon: "💬" },
+  { name: "Desenvolvimento Web", icon: "🌐" },
 ];
 
 /**
@@ -46,7 +45,8 @@ const skillsList = [
  * about you on a professional level.
  */
 const detailOrQuote =
-  "I am passionate about solving problems in new creative ways to drive innovation. By leveraging my AI expertise, I continually look for new and better ways to make tech accessible by all.";
+  "\"Acredito que a tecnologia deve ser inclusiva, ética e criativa. Minha missão é usar IA para resolver problemas reais e gerar impacto positivo na sociedade.\"";
+
 
 const About = () => {
   return (
@@ -63,9 +63,30 @@ const About = () => {
           borderRadius: "16px",
           boxShadow: "0 2px 8px rgba(0,0,0,0.04)",
         }}
+        aria-label="Sobre mim"
       >
-        <h2 tabIndex="0">About Myself</h2>
+        <h2 tabIndex="0">Sobre Mim</h2>
         <p className="large">{description}</p>
+        <a
+          href="/curriculo.pdf"
+          download
+          style={{
+            display: "inline-block",
+            margin: "1rem 0",
+            padding: "0.5rem 1.5rem",
+            background: "#6c63ff",
+            color: "#fff",
+            borderRadius: "8px",
+            textDecoration: "none",
+            fontWeight: "bold",
+            fontSize: "1rem",
+            boxShadow: "0 1px 4px rgba(0,0,0,0.08)",
+            transition: "background 0.2s",
+          }}
+          aria-label="Baixar currículo em PDF"
+        >
+          Baixar Currículo
+        </a>
         <hr />
         <ul
           style={{
@@ -74,15 +95,19 @@ const About = () => {
             fontSize: "1.15rem",
             margin: "2rem 3rem",
             gap: "3rem",
-            listStyle: "square inside",
+            listStyle: "none",
+            padding: 0,
           }}
         >
           {skillsList.map((skill) => (
-            <li key={skill} tabIndex="0">{skill}</li>
+            <li key={skill.name} tabIndex="0" style={{ display: "flex", alignItems: "center", marginBottom: "0.5rem" }}>
+              <span style={{ fontSize: "1.3rem", marginRight: "0.5rem" }} aria-hidden="true">{skill.icon}</span>
+              <span>{skill.name}</span>
+            </li>
           ))}
         </ul>
         <hr />
-        <p style={{ padding: "1rem 3rem 0" }}>{detailOrQuote}</p>
+        <blockquote style={{ padding: "1rem 3rem 0", fontStyle: "italic", color: "#555" }}>{detailOrQuote}</blockquote>
       </div>
     </section>
   );
