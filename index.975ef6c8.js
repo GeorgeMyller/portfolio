@@ -27101,6 +27101,7 @@ var _homeDefault = parcelHelpers.interopDefault(_home);
 var _portfolio = require("./Components/Portfolio");
 var _portfolioDefault = parcelHelpers.interopDefault(_portfolio);
 var _stylesCss = require("./styles.css");
+var _s = $RefreshSig$();
 /**
  * This object represents your information. The project is set so that you
  * only need to update these here, and values are passed a properties to the
@@ -27122,12 +27123,37 @@ var _stylesCss = require("./styles.css");
 const primaryColor = "#4E567E";
 const secondaryColor = "#D2F1E4";
 const App = ()=>{
+    _s();
+    const [theme, setTheme] = (0, _react.useState)(()=>{
+        if (typeof window !== "undefined") return localStorage.getItem("theme") || "light";
+        return "light";
+    });
+    (0, _react.useEffect)(()=>{
+        document.documentElement.setAttribute("data-theme", theme);
+        localStorage.setItem("theme", theme);
+    }, [
+        theme
+    ]);
+    const toggleTheme = ()=>{
+        setTheme((prev)=>prev === "light" ? "dark" : "light");
+    };
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         id: "main",
         children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                className: `theme-toggle${theme === "dark" ? " dark" : ""}`,
+                onClick: toggleTheme,
+                "aria-label": theme === "dark" ? "Ativar modo claro" : "Ativar modo escuro",
+                title: theme === "dark" ? "Modo claro" : "Modo escuro",
+                children: theme === "dark" ? "\uD83C\uDF19" : "☀️"
+            }, void 0, false, {
+                fileName: "src/App.jsx",
+                lineNumber: 63,
+                columnNumber: 7
+            }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _headerDefault.default), {}, void 0, false, {
                 fileName: "src/App.jsx",
-                lineNumber: 43,
+                lineNumber: 71,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _homeDefault.default), {
@@ -27135,17 +27161,17 @@ const App = ()=>{
                 title: siteProps.title
             }, void 0, false, {
                 fileName: "src/App.jsx",
-                lineNumber: 44,
+                lineNumber: 72,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _aboutDefault.default), {}, void 0, false, {
                 fileName: "src/App.jsx",
-                lineNumber: 45,
+                lineNumber: 73,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _portfolioDefault.default), {}, void 0, false, {
                 fileName: "src/App.jsx",
-                lineNumber: 46,
+                lineNumber: 74,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _footerDefault.default), {
@@ -27154,16 +27180,17 @@ const App = ()=>{
                 secondaryColor: secondaryColor
             }, void 0, false, {
                 fileName: "src/App.jsx",
-                lineNumber: 47,
+                lineNumber: 75,
                 columnNumber: 7
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/App.jsx",
-        lineNumber: 42,
+        lineNumber: 62,
         columnNumber: 5
     }, undefined);
 };
+_s(App, "MY/h5u52ATRxLO8/32PnLmtb6Hw=");
 _c = App;
 exports.default = App;
 var _c;
@@ -27237,18 +27264,22 @@ const About = ()=>{
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                 style: {
-                    backgroundColor: "white",
-                    width: "50%",
-                    padding: "4rem",
+                    backgroundColor: "var(--card-bg, white)",
+                    width: "min(95vw, 600px)",
+                    padding: "4rem 2rem",
                     margin: "3rem auto",
-                    textAlign: "center"
+                    textAlign: "center",
+                    color: "var(--text-color, #222)",
+                    borderRadius: "16px",
+                    boxShadow: "0 2px 8px rgba(0,0,0,0.04)"
                 },
                 children: [
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
+                        tabIndex: "0",
                         children: "About Myself"
                     }, void 0, false, {
                         fileName: "src/Components/About.jsx",
-                        lineNumber: 64,
+                        lineNumber: 67,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
@@ -27256,37 +27287,39 @@ const About = ()=>{
                         children: description
                     }, void 0, false, {
                         fileName: "src/Components/About.jsx",
-                        lineNumber: 65,
+                        lineNumber: 68,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("hr", {}, void 0, false, {
                         fileName: "src/Components/About.jsx",
-                        lineNumber: 66,
+                        lineNumber: 69,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
                         style: {
                             textAlign: "left",
                             columns: 2,
-                            fontSize: "1.25rem",
+                            fontSize: "1.15rem",
                             margin: "2rem 3rem",
-                            gap: "3rem"
+                            gap: "3rem",
+                            listStyle: "square inside"
                         },
                         children: skillsList.map((skill)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                                tabIndex: "0",
                                 children: skill
                             }, skill, false, {
                                 fileName: "src/Components/About.jsx",
-                                lineNumber: 77,
+                                lineNumber: 81,
                                 columnNumber: 13
                             }, undefined))
                     }, void 0, false, {
                         fileName: "src/Components/About.jsx",
-                        lineNumber: 67,
+                        lineNumber: 70,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("hr", {}, void 0, false, {
                         fileName: "src/Components/About.jsx",
-                        lineNumber: 80,
+                        lineNumber: 84,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
@@ -27296,7 +27329,7 @@ const About = ()=>{
                         children: detailOrQuote
                     }, void 0, false, {
                         fileName: "src/Components/About.jsx",
-                        lineNumber: 81,
+                        lineNumber: 85,
                         columnNumber: 9
                     }, undefined)
                 ]
@@ -27766,7 +27799,7 @@ $RefreshReg$(_c, "Footer");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","prop-types":"7wKI2","../images/socials/github.svg":"vP2m6","../images/socials/instagram.svg":"jH0VA","../images/socials/linkedin.svg":"5XSmz","../images/socials/twitter.svg":"flM6L","../images/socials/youtube.svg":"hmN7D","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","../images/socials/devdotto.svg":"69cpV","../images/socials/envelope.svg":"92UhI"}],"7wKI2":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","prop-types":"7wKI2","../images/socials/devdotto.svg":"69cpV","../images/socials/envelope.svg":"92UhI","../images/socials/github.svg":"vP2m6","../images/socials/instagram.svg":"jH0VA","../images/socials/linkedin.svg":"5XSmz","../images/socials/twitter.svg":"flM6L","../images/socials/youtube.svg":"hmN7D","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"7wKI2":[function(require,module,exports) {
 var ReactIs = require("react-is");
 // By explicitly using `prop-types` you are opting into new development behavior.
 // http://fb.me/prop-types-in-prod
@@ -28507,7 +28540,13 @@ printWarning = function(text) {
 };
 module.exports = checkPropTypes;
 
-},{"./lib/ReactPropTypesSecret":"jZTZJ","./lib/has":"fqKuf"}],"vP2m6":[function(require,module,exports) {
+},{"./lib/ReactPropTypesSecret":"jZTZJ","./lib/has":"fqKuf"}],"69cpV":[function(require,module,exports) {
+module.exports = require("./helpers/bundle-url").getBundleURL("bLxZJ") + "devdotto.3bb7afaf.svg" + "?" + Date.now();
+
+},{"./helpers/bundle-url":"lgJ39"}],"92UhI":[function(require,module,exports) {
+module.exports = require("./helpers/bundle-url").getBundleURL("bLxZJ") + "envelope.5e5e1d9e.svg" + "?" + Date.now();
+
+},{"./helpers/bundle-url":"lgJ39"}],"vP2m6":[function(require,module,exports) {
 module.exports = require("./helpers/bundle-url").getBundleURL("bLxZJ") + "github.51e0fbb2.svg" + "?" + Date.now();
 
 },{"./helpers/bundle-url":"lgJ39"}],"jH0VA":[function(require,module,exports) {
@@ -28521,12 +28560,6 @@ module.exports = require("./helpers/bundle-url").getBundleURL("bLxZJ") + "twitte
 
 },{"./helpers/bundle-url":"lgJ39"}],"hmN7D":[function(require,module,exports) {
 module.exports = require("./helpers/bundle-url").getBundleURL("bLxZJ") + "youtube.c3557793.svg" + "?" + Date.now();
-
-},{"./helpers/bundle-url":"lgJ39"}],"69cpV":[function(require,module,exports) {
-module.exports = require("./helpers/bundle-url").getBundleURL("bLxZJ") + "devdotto.3bb7afaf.svg" + "?" + Date.now();
-
-},{"./helpers/bundle-url":"lgJ39"}],"92UhI":[function(require,module,exports) {
-module.exports = require("./helpers/bundle-url").getBundleURL("bLxZJ") + "envelope.5e5e1d9e.svg" + "?" + Date.now();
 
 },{"./helpers/bundle-url":"lgJ39"}],"9Dt2F":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$2a62 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
@@ -28546,7 +28579,7 @@ var _jsxDevRuntime = require("react/jsx-dev-runtime");
  */ var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
 const Header = ()=>{
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("nav", {
         style: {
             position: "fixed",
             display: "flex",
@@ -28556,39 +28589,45 @@ const Header = ()=>{
             padding: "1rem",
             top: 0,
             width: "100%",
-            zIndex: 10
+            zIndex: 10,
+            backdropFilter: "blur(6px)"
         },
+        "aria-label": "Navega\xe7\xe3o principal",
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
                 href: "#home",
+                tabIndex: "0",
                 children: "Home"
-            }, void 0, false, {
-                fileName: "src/Components/Header.jsx",
-                lineNumber: 24,
-                columnNumber: 7
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
-                href: "#about",
-                children: "About"
-            }, void 0, false, {
-                fileName: "src/Components/Header.jsx",
-                lineNumber: 25,
-                columnNumber: 7
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
-                href: "#portfolio",
-                children: "Portfolio"
             }, void 0, false, {
                 fileName: "src/Components/Header.jsx",
                 lineNumber: 26,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
-                href: "#footer",
-                children: "Contact"
+                href: "#about",
+                tabIndex: "0",
+                children: "About"
             }, void 0, false, {
                 fileName: "src/Components/Header.jsx",
                 lineNumber: 27,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
+                href: "#portfolio",
+                tabIndex: "0",
+                children: "Portfolio"
+            }, void 0, false, {
+                fileName: "src/Components/Header.jsx",
+                lineNumber: 28,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
+                href: "#footer",
+                tabIndex: "0",
+                children: "Contact"
+            }, void 0, false, {
+                fileName: "src/Components/Header.jsx",
+                lineNumber: 29,
                 columnNumber: 7
             }, undefined)
         ]
@@ -28666,6 +28705,7 @@ const Home = ({ name , title  })=>{
                 },
                 children: [
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                        tabIndex: "0",
                         children: name
                     }, void 0, false, {
                         fileName: "src/Components/Home.jsx",
@@ -28673,6 +28713,7 @@ const Home = ({ name , title  })=>{
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
+                        tabIndex: "0",
                         children: title
                     }, void 0, false, {
                         fileName: "src/Components/Home.jsx",
@@ -28689,7 +28730,8 @@ const Home = ({ name , title  })=>{
                 style: {
                     position: "absolute",
                     bottom: "3rem",
-                    left: "50%"
+                    left: "50%",
+                    transform: "translateX(-30%)"
                 },
                 children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
                     src: (0, _downArrowSvgDefault.default),
@@ -28697,7 +28739,7 @@ const Home = ({ name , title  })=>{
                         height: "3rem",
                         width: "3rem"
                     },
-                    alt: imageAltText
+                    alt: "Seta para baixo, role para ver mais"
                 }, void 0, false, {
                     fileName: "src/Components/Home.jsx",
                     lineNumber: 36,
@@ -28733,7 +28775,7 @@ $RefreshReg$(_c, "Home");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../images/down-arrow.svg":"b5nCi","prop-types":"7wKI2","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","../images/Default_Enter_a_creative_world_where_the_pet_industry_meets_co_0.jpg":"3y4Xc"}],"b5nCi":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../images/down-arrow.svg":"b5nCi","prop-types":"7wKI2","../images/Default_Enter_a_creative_world_where_the_pet_industry_meets_co_0.jpg":"3y4Xc","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"b5nCi":[function(require,module,exports) {
 module.exports = require("./helpers/bundle-url").getBundleURL("bLxZJ") + "down-arrow.1037091f.svg" + "?" + Date.now();
 
 },{"./helpers/bundle-url":"lgJ39"}],"3y4Xc":[function(require,module,exports) {
@@ -28777,24 +28819,64 @@ const imageAltText = "desktop with books and laptop";
  * links section. Below is a sample, update to reflect links you'd like to highlight.
  */ const projectList = [
     {
-        title: "crews",
-        description: "Agents with CrewAI",
-        url: "https://github.com/GeorgeMyller/crews"
+        title: "groups_evo_crewai-escolher-envio-para-grupo-ou-para-meu-numero",
+        description: "Bot para resumir mensagens de grupos do WhatsApp e permitir o envio para o grupo ou n\xfamero pessoal usando CrewAI.",
+        url: "https://github.com/GeorgeMyller/groups_evo_crewai-escolher-envio-para-grupo-ou-para-meu-numero",
+        image: require("../images/Default_Enter_a_creative_world_where_the_pet_industry_meets_co_0-2.jpg"),
+        tech: [
+            "Python",
+            "CrewAI",
+            "Evolution API"
+        ],
+        demo: ""
     },
     {
-        title: "curso-Python-DSA",
-        description: "Atividades desenvolvidas no curso da DSA",
-        url: "https://github.com/GeorgeMyller/curso-Python-DSA"
-    },
-    {
-        title: "DataAnalytics",
-        description: "Repository of my start on Data Analytics",
-        url: "https://github.com/GeorgeMyller/DataAnalytics"
+        title: "move_to_ssd",
+        description: "Script Python para migrar pastas e aplicativos do macOS para SSD externo com symlinks autom\xe1ticos.",
+        url: "https://github.com/GeorgeMyller/move_to_ssd",
+        image: require("../images/Default_Imagine_a_world_where_the_office_is_not_just_a_place_f_0.jpg"),
+        tech: [
+            "Python",
+            "macOS",
+            "Symlinks"
+        ],
+        demo: ""
     },
     {
         title: "agenteinstagram",
-        description: "",
-        url: "https://github.com/GeorgeMyller/agenteinstagram"
+        description: "Agente automatizado para postagens no Instagram com cria\xe7\xe3o de legendas automaticas e postagem do conte\xfado.",
+        url: "https://github.com/GeorgeMyller/agenteinstagram",
+        image: require("../images/Default_Enter_a_creative_world_where_the_pet_industry_meets_co_1.jpg"),
+        tech: [
+            "Python",
+            "Instagram API",
+            "Automa\xe7\xe3o"
+        ],
+        demo: ""
+    },
+    {
+        title: "webscraping",
+        description: "Scripts em Python para extra\xe7\xe3o e an\xe1lise de dados de p\xe1ginas web usando bibliotecas de scraping.",
+        url: "https://github.com/GeorgeMyller/webscraping",
+        image: require("../images/Default_Enter_a_creative_world_where_the_pet_industry_meets_co_2.jpg"),
+        tech: [
+            "Python",
+            "BeautifulSoup",
+            "Pandas"
+        ],
+        demo: ""
+    },
+    {
+        title: "linkedinwriter",
+        description: "Ferramenta para automa\xe7\xe3o de cria\xe7\xe3o de conte\xfado e postagens no LinkedIn.",
+        url: "https://github.com/GeorgeMyller/linkedinwriter",
+        image: require("../images/Default_Enter_a_creative_world_where_the_pet_industry_meets_co_3.jpg"),
+        tech: [
+            "Python",
+            "LinkedIn API",
+            "Automa\xe7\xe3o"
+        ],
+        demo: ""
     }, 
 ];
 const Portfolio = ()=>{
@@ -28809,7 +28891,7 @@ const Portfolio = ()=>{
                 children: "Portfolio"
             }, void 0, false, {
                 fileName: "src/Components/Portfolio.jsx",
-                lineNumber: 60,
+                lineNumber: 78,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -28834,36 +28916,46 @@ const Portfolio = ()=>{
                             alt: imageAltText
                         }, void 0, false, {
                             fileName: "src/Components/Portfolio.jsx",
-                            lineNumber: 63,
+                            lineNumber: 81,
                             columnNumber: 11
                         }, undefined)
                     }, void 0, false, {
                         fileName: "src/Components/Portfolio.jsx",
-                        lineNumber: 62,
+                        lineNumber: 80,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: "container",
+                        className: "container portfolio-grid",
                         children: projectList.map((project)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                className: "box",
+                                className: "box project-card",
                                 children: [
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
                                         href: project.url,
                                         target: "_blank",
                                         rel: "noopener noreferrer",
-                                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
-                                            style: {
-                                                flexBasis: "40px"
-                                            },
-                                            children: project.title
-                                        }, void 0, false, {
-                                            fileName: "src/Components/Portfolio.jsx",
-                                            lineNumber: 73,
-                                            columnNumber: 17
-                                        }, undefined)
-                                    }, void 0, false, {
+                                        "aria-label": `Ver código de ${project.title}`,
+                                        children: [
+                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                                                src: project.image,
+                                                alt: `Imagem do projeto ${project.title}`,
+                                                className: "project-image",
+                                                loading: "lazy"
+                                            }, void 0, false, {
+                                                fileName: "src/Components/Portfolio.jsx",
+                                                lineNumber: 91,
+                                                columnNumber: 17
+                                            }, undefined),
+                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
+                                                children: project.title
+                                            }, void 0, false, {
+                                                fileName: "src/Components/Portfolio.jsx",
+                                                lineNumber: 92,
+                                                columnNumber: 17
+                                            }, undefined)
+                                        ]
+                                    }, void 0, true, {
                                         fileName: "src/Components/Portfolio.jsx",
-                                        lineNumber: 72,
+                                        lineNumber: 90,
                                         columnNumber: 15
                                     }, undefined),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
@@ -28871,30 +28963,76 @@ const Portfolio = ()=>{
                                         children: project.description
                                     }, void 0, false, {
                                         fileName: "src/Components/Portfolio.jsx",
-                                        lineNumber: 75,
+                                        lineNumber: 94,
+                                        columnNumber: 15
+                                    }, undefined),
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                        className: "tech-list",
+                                        children: project.tech.map((t)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                                className: "tech-badge",
+                                                children: t
+                                            }, t, false, {
+                                                fileName: "src/Components/Portfolio.jsx",
+                                                lineNumber: 97,
+                                                columnNumber: 19
+                                            }, undefined))
+                                    }, void 0, false, {
+                                        fileName: "src/Components/Portfolio.jsx",
+                                        lineNumber: 95,
+                                        columnNumber: 15
+                                    }, undefined),
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                        className: "project-links",
+                                        children: [
+                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
+                                                href: project.url,
+                                                target: "_blank",
+                                                rel: "noopener noreferrer",
+                                                className: "project-btn",
+                                                children: "Ver c\xf3digo"
+                                            }, void 0, false, {
+                                                fileName: "src/Components/Portfolio.jsx",
+                                                lineNumber: 101,
+                                                columnNumber: 17
+                                            }, undefined),
+                                            project.demo && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
+                                                href: project.demo,
+                                                target: "_blank",
+                                                rel: "noopener noreferrer",
+                                                className: "project-btn",
+                                                children: "Demo"
+                                            }, void 0, false, {
+                                                fileName: "src/Components/Portfolio.jsx",
+                                                lineNumber: 103,
+                                                columnNumber: 19
+                                            }, undefined)
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "src/Components/Portfolio.jsx",
+                                        lineNumber: 100,
                                         columnNumber: 15
                                     }, undefined)
                                 ]
                             }, project.title, true, {
                                 fileName: "src/Components/Portfolio.jsx",
-                                lineNumber: 71,
+                                lineNumber: 89,
                                 columnNumber: 13
                             }, undefined))
                     }, void 0, false, {
                         fileName: "src/Components/Portfolio.jsx",
-                        lineNumber: 69,
+                        lineNumber: 87,
                         columnNumber: 9
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/Components/Portfolio.jsx",
-                lineNumber: 61,
+                lineNumber: 79,
                 columnNumber: 7
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/Components/Portfolio.jsx",
-        lineNumber: 59,
+        lineNumber: 77,
         columnNumber: 5
     }, undefined);
 };
@@ -28908,8 +29046,23 @@ $RefreshReg$(_c, "Portfolio");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","../images/Default_Your_pet_reptile_has_always_been_your_source_of_inspir_0.jpg":"j1jFT"}],"j1jFT":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../images/Default_Your_pet_reptile_has_always_been_your_source_of_inspir_0.jpg":"j1jFT","../images/Default_Enter_a_creative_world_where_the_pet_industry_meets_co_0-2.jpg":"9EG0r","../images/Default_Imagine_a_world_where_the_office_is_not_just_a_place_f_0.jpg":"8UwPB","../images/Default_Enter_a_creative_world_where_the_pet_industry_meets_co_1.jpg":"eJKN0","../images/Default_Enter_a_creative_world_where_the_pet_industry_meets_co_2.jpg":"eLub6","../images/Default_Enter_a_creative_world_where_the_pet_industry_meets_co_3.jpg":"cKK1F","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"j1jFT":[function(require,module,exports) {
 module.exports = require("./helpers/bundle-url").getBundleURL("bLxZJ") + "Default_Your_pet_reptile_has_always_been_your_source_of_inspir_0.0e591c7e.jpg" + "?" + Date.now();
+
+},{"./helpers/bundle-url":"lgJ39"}],"9EG0r":[function(require,module,exports) {
+module.exports = require("./helpers/bundle-url").getBundleURL("bLxZJ") + "Default_Enter_a_creative_world_where_the_pet_industry_meets_co_0-2.881e34ec.jpg" + "?" + Date.now();
+
+},{"./helpers/bundle-url":"lgJ39"}],"8UwPB":[function(require,module,exports) {
+module.exports = require("./helpers/bundle-url").getBundleURL("bLxZJ") + "Default_Imagine_a_world_where_the_office_is_not_just_a_place_f_0.1658b663.jpg" + "?" + Date.now();
+
+},{"./helpers/bundle-url":"lgJ39"}],"eJKN0":[function(require,module,exports) {
+module.exports = require("./helpers/bundle-url").getBundleURL("bLxZJ") + "Default_Enter_a_creative_world_where_the_pet_industry_meets_co_1.2696702b.jpg" + "?" + Date.now();
+
+},{"./helpers/bundle-url":"lgJ39"}],"eLub6":[function(require,module,exports) {
+module.exports = require("./helpers/bundle-url").getBundleURL("bLxZJ") + "Default_Enter_a_creative_world_where_the_pet_industry_meets_co_2.a730cf06.jpg" + "?" + Date.now();
+
+},{"./helpers/bundle-url":"lgJ39"}],"cKK1F":[function(require,module,exports) {
+module.exports = require("./helpers/bundle-url").getBundleURL("bLxZJ") + "Default_Enter_a_creative_world_where_the_pet_industry_meets_co_3.43105727.jpg" + "?" + Date.now();
 
 },{"./helpers/bundle-url":"lgJ39"}],"lW6qc":[function() {},{}]},["1xC6H","ShInH","8lqZg"], "8lqZg", "parcelRequire6158")
 
