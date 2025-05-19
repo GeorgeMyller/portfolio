@@ -27231,23 +27231,41 @@ var _defaultCrieUmImagemLandscapeSobreBilogiaEmTransioPar0JpgDefault = parcelHel
 const imageAltText = "purple and blue abstract background";
 /**
  * Sort description that expands on your title on the Home component.
- */ const description = "I'm a AI Agent Developer with a passion for creating innovative solutions that enhance user experiences. With a background in Python and Data Analysis, I strive to make technology accessible and engaging for everyone.";
+ */ const description = "Sou desenvolvedor de Agentes de IA, apaixonado por criar solu\xe7\xf5es inovadoras que transformam experi\xeancias digitais. Com forte atua\xe7\xe3o em Python, an\xe1lise de dados e machine learning, busco tornar a tecnologia acess\xedvel, \xe9tica e impactante para todos.";
 /**
  * List of some of skills or technologies you work on, are learning,
  * passionate about, or enjoy,
  */ const skillsList = [
-    "AI Agent Development",
-    "Data analysis",
-    "Python programming",
-    "AI and machine learning",
-    "Natural language processing",
-    "Web development", 
+    {
+        name: "Desenvolvimento de Agentes de IA",
+        icon: "\uD83E\uDD16"
+    },
+    {
+        name: "An\xe1lise de Dados",
+        icon: "\uD83D\uDCCA"
+    },
+    {
+        name: "Programa\xe7\xe3o Python",
+        icon: "\uD83D\uDC0D"
+    },
+    {
+        name: "Machine Learning",
+        icon: "\uD83E\uDDE0"
+    },
+    {
+        name: "Processamento de Linguagem Natural",
+        icon: "\uD83D\uDCAC"
+    },
+    {
+        name: "Desenvolvimento Web",
+        icon: "\uD83C\uDF10"
+    }, 
 ];
 /**
  * Use this to give more information about what you are passionate about,
  * how you best work, or even a quote. This will help someone learn more
  * about you on a professional level.
- */ const detailOrQuote = "I am passionate about solving problems in new creative ways to drive innovation. By leveraging my AI expertise, I continually look for new and better ways to make tech accessible by all.";
+ */ const detailOrQuote = '"Acredito que a tecnologia deve ser inclusiva, \xe9tica e criativa. Minha miss\xe3o \xe9 usar IA para resolver problemas reais e gerar impacto positivo na sociedade."';
 const About = ()=>{
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("section", {
         className: "padding",
@@ -27273,13 +27291,14 @@ const About = ()=>{
                     borderRadius: "16px",
                     boxShadow: "0 2px 8px rgba(0,0,0,0.04)"
                 },
+                "aria-label": "Sobre mim",
                 children: [
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
                         tabIndex: "0",
-                        children: "About Myself"
+                        children: "Sobre Mim"
                     }, void 0, false, {
                         fileName: "src/Components/About.jsx",
-                        lineNumber: 67,
+                        lineNumber: 68,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
@@ -27287,12 +27306,35 @@ const About = ()=>{
                         children: description
                     }, void 0, false, {
                         fileName: "src/Components/About.jsx",
-                        lineNumber: 68,
+                        lineNumber: 69,
+                        columnNumber: 9
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
+                        href: "/curriculo.pdf",
+                        download: true,
+                        style: {
+                            display: "inline-block",
+                            margin: "1rem 0",
+                            padding: "0.5rem 1.5rem",
+                            background: "#6c63ff",
+                            color: "#fff",
+                            borderRadius: "8px",
+                            textDecoration: "none",
+                            fontWeight: "bold",
+                            fontSize: "1rem",
+                            boxShadow: "0 1px 4px rgba(0,0,0,0.08)",
+                            transition: "background 0.2s"
+                        },
+                        "aria-label": "Baixar curr\xedculo em PDF",
+                        children: "Baixar Curr\xedculo"
+                    }, void 0, false, {
+                        fileName: "src/Components/About.jsx",
+                        lineNumber: 70,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("hr", {}, void 0, false, {
                         fileName: "src/Components/About.jsx",
-                        lineNumber: 69,
+                        lineNumber: 90,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
@@ -27302,34 +27344,62 @@ const About = ()=>{
                             fontSize: "1.15rem",
                             margin: "2rem 3rem",
                             gap: "3rem",
-                            listStyle: "square inside"
+                            listStyle: "none",
+                            padding: 0
                         },
                         children: skillsList.map((skill)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
                                 tabIndex: "0",
-                                children: skill
-                            }, skill, false, {
+                                style: {
+                                    display: "flex",
+                                    alignItems: "center",
+                                    marginBottom: "0.5rem"
+                                },
+                                children: [
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                        style: {
+                                            fontSize: "1.3rem",
+                                            marginRight: "0.5rem"
+                                        },
+                                        "aria-hidden": "true",
+                                        children: skill.icon
+                                    }, void 0, false, {
+                                        fileName: "src/Components/About.jsx",
+                                        lineNumber: 104,
+                                        columnNumber: 15
+                                    }, undefined),
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                        children: skill.name
+                                    }, void 0, false, {
+                                        fileName: "src/Components/About.jsx",
+                                        lineNumber: 105,
+                                        columnNumber: 15
+                                    }, undefined)
+                                ]
+                            }, skill.name, true, {
                                 fileName: "src/Components/About.jsx",
-                                lineNumber: 81,
+                                lineNumber: 103,
                                 columnNumber: 13
                             }, undefined))
                     }, void 0, false, {
                         fileName: "src/Components/About.jsx",
-                        lineNumber: 70,
+                        lineNumber: 91,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("hr", {}, void 0, false, {
                         fileName: "src/Components/About.jsx",
-                        lineNumber: 84,
+                        lineNumber: 109,
                         columnNumber: 9
                     }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("blockquote", {
                         style: {
-                            padding: "1rem 3rem 0"
+                            padding: "1rem 3rem 0",
+                            fontStyle: "italic",
+                            color: "#555"
                         },
                         children: detailOrQuote
                     }, void 0, false, {
                         fileName: "src/Components/About.jsx",
-                        lineNumber: 85,
+                        lineNumber: 110,
                         columnNumber: 9
                     }, undefined)
                 ]
@@ -28678,93 +28748,232 @@ var _propTypesDefault = parcelHelpers.interopDefault(_propTypes);
  *
  * Need an image? Check out https://unsplash.com to download a photo you
  * freely use on your site.
- */ var _defaultEnterACreativeWorldWhereThePetIndustryMeetsCo0Jpg = require("../images/Default_Enter_a_creative_world_where_the_pet_industry_meets_co_0.jpg");
-var _defaultEnterACreativeWorldWhereThePetIndustryMeetsCo0JpgDefault = parcelHelpers.interopDefault(_defaultEnterACreativeWorldWhereThePetIndustryMeetsCo0Jpg);
-const imageAltText = "Lizard with a window background, on front a computer";
-const Home = ({ name , title  })=>{
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("section", {
+ */ // Permite passar imagem e alt como props, mas mantém padrão
+const defaultImage = require("../images/Default_Enter_a_creative_world_where_the_pet_industry_meets_co_0.jpg");
+const defaultImageAlt = "Lizard with a window background, on front a computer";
+const Home = ({ name , title , image , imageAlt , subtitle , ctaText , ctaHref  })=>{
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("header", {
         id: "home",
         className: "min-height",
+        "aria-label": "Se\xe7\xe3o inicial do portf\xf3lio",
+        style: {
+            position: "relative",
+            minHeight: "80vh",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            overflow: "hidden"
+        },
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
                 className: "background",
-                src: (0, _defaultEnterACreativeWorldWhereThePetIndustryMeetsCo0JpgDefault.default),
-                alt: imageAltText
+                src: image || defaultImage,
+                alt: imageAlt || defaultImageAlt,
+                style: {
+                    width: "100%",
+                    height: "100%",
+                    objectFit: "cover",
+                    position: "absolute",
+                    top: 0,
+                    left: 0,
+                    zIndex: 0
+                }
             }, void 0, false, {
                 fileName: "src/Components/Home.jsx",
-                lineNumber: 30,
+                lineNumber: 44,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                 style: {
                     position: "absolute",
-                    top: "5rem",
-                    left: "2rem",
-                    width: "20rem",
-                    color: "white"
+                    top: 0,
+                    left: 0,
+                    width: "100%",
+                    height: "100%",
+                    background: "linear-gradient(90deg, rgba(0,0,0,0.55) 60%, rgba(0,0,0,0.15) 100%)",
+                    zIndex: 1
+                },
+                "aria-hidden": "true"
+            }, void 0, false, {
+                fileName: "src/Components/Home.jsx",
+                lineNumber: 59,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                style: {
+                    position: "relative",
+                    zIndex: 2,
+                    color: "#fff",
+                    maxWidth: "600px",
+                    width: "90vw",
+                    padding: "2.5rem 2rem 2rem 2.5rem",
+                    borderRadius: "18px",
+                    background: "rgba(0,0,0,0.18)",
+                    boxShadow: "0 4px 24px rgba(0,0,0,0.10)",
+                    textAlign: "left",
+                    display: "flex",
+                    flexDirection: "column",
+                    alignItems: "flex-start",
+                    animation: "fadeIn 1.2s cubic-bezier(.4,0,.2,1)"
                 },
                 children: [
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
                         tabIndex: "0",
+                        style: {
+                            fontSize: "2.8rem",
+                            fontWeight: 800,
+                            lineHeight: 1.1,
+                            margin: 0,
+                            letterSpacing: "-1px",
+                            textShadow: "0 2px 12px rgba(0,0,0,0.25)"
+                        },
                         children: name
                     }, void 0, false, {
                         fileName: "src/Components/Home.jsx",
-                        lineNumber: 32,
+                        lineNumber: 90,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
                         tabIndex: "0",
+                        style: {
+                            fontSize: "1.6rem",
+                            fontWeight: 500,
+                            margin: "0.5rem 0 0.5rem 0",
+                            textShadow: "0 1px 8px rgba(0,0,0,0.18)"
+                        },
                         children: title
                     }, void 0, false, {
                         fileName: "src/Components/Home.jsx",
-                        lineNumber: 33,
+                        lineNumber: 103,
+                        columnNumber: 9
+                    }, undefined),
+                    subtitle && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                        style: {
+                            fontSize: "1.15rem",
+                            margin: "0 0 1.5rem 0",
+                            color: "#e0e0e0",
+                            fontWeight: 400,
+                            textShadow: "0 1px 8px rgba(0,0,0,0.18)"
+                        },
+                        children: subtitle
+                    }, void 0, false, {
+                        fileName: "src/Components/Home.jsx",
+                        lineNumber: 115,
+                        columnNumber: 11
+                    }, undefined),
+                    ctaText && ctaHref && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
+                        href: ctaHref,
+                        style: {
+                            display: "inline-block",
+                            background: "#6c63ff",
+                            color: "#fff",
+                            borderRadius: "8px",
+                            textDecoration: "none",
+                            fontWeight: "bold",
+                            fontSize: "1.1rem",
+                            padding: "0.7rem 2.2rem",
+                            marginTop: "0.5rem",
+                            boxShadow: "0 2px 8px rgba(0,0,0,0.10)",
+                            transition: "background 0.2s"
+                        },
+                        "aria-label": ctaText,
+                        children: ctaText
+                    }, void 0, false, {
+                        fileName: "src/Components/Home.jsx",
+                        lineNumber: 128,
+                        columnNumber: 11
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "src/Components/Home.jsx",
+                lineNumber: 72,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                style: {
+                    position: "absolute",
+                    bottom: "2.5rem",
+                    left: "50%",
+                    transform: "translateX(-50%)",
+                    display: "flex",
+                    flexDirection: "column",
+                    alignItems: "center",
+                    zIndex: 3
+                },
+                "aria-label": "Role para ver mais",
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                        src: (0, _downArrowSvgDefault.default),
+                        style: {
+                            height: "3rem",
+                            width: "3rem",
+                            animation: "bounce 1.5s infinite"
+                        },
+                        alt: "Seta para baixo, role para ver mais"
+                    }, void 0, false, {
+                        fileName: "src/Components/Home.jsx",
+                        lineNumber: 163,
+                        columnNumber: 9
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("style", {
+                        children: `
+          @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(12px); }
+          }
+          @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+          }
+          @media (max-width: 600px) {
+            header#home > div[style*='z-index: 2'] {
+              padding: 1.2rem 0.7rem 1.2rem 1rem !important;
+              max-width: 98vw !important;
+            }
+            header#home h1 {
+              font-size: 2rem !important;
+            }
+            header#home h2 {
+              font-size: 1.1rem !important;
+            }
+          }
+        `
+                    }, void 0, false, {
+                        fileName: "src/Components/Home.jsx",
+                        lineNumber: 168,
                         columnNumber: 9
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/Components/Home.jsx",
-                lineNumber: 31,
-                columnNumber: 7
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                style: {
-                    position: "absolute",
-                    bottom: "3rem",
-                    left: "50%",
-                    transform: "translateX(-30%)"
-                },
-                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                    src: (0, _downArrowSvgDefault.default),
-                    style: {
-                        height: "3rem",
-                        width: "3rem"
-                    },
-                    alt: "Seta para baixo, role para ver mais"
-                }, void 0, false, {
-                    fileName: "src/Components/Home.jsx",
-                    lineNumber: 36,
-                    columnNumber: 9
-                }, undefined)
-            }, void 0, false, {
-                fileName: "src/Components/Home.jsx",
-                lineNumber: 35,
+                lineNumber: 150,
                 columnNumber: 7
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/Components/Home.jsx",
-        lineNumber: 29,
+        lineNumber: 31,
         columnNumber: 5
     }, undefined);
 };
 _c = Home;
 Home.defaultProps = {
     name: "",
-    title: ""
+    title: "",
+    image: defaultImage,
+    imageAlt: defaultImageAlt,
+    subtitle: "Desenvolvedor de IA e solu\xe7\xf5es digitais inovadoras.",
+    ctaText: "Ver Portf\xf3lio",
+    ctaHref: "#portfolio"
 };
 Home.propTypes = {
     name: (0, _propTypesDefault.default).string.isRequired,
-    title: (0, _propTypesDefault.default).string.isRequired
+    title: (0, _propTypesDefault.default).string.isRequired,
+    image: (0, _propTypesDefault.default).string,
+    imageAlt: (0, _propTypesDefault.default).string,
+    subtitle: (0, _propTypesDefault.default).string,
+    ctaText: (0, _propTypesDefault.default).string,
+    ctaHref: (0, _propTypesDefault.default).string
 };
 exports.default = Home;
 var _c;
@@ -28775,7 +28984,7 @@ $RefreshReg$(_c, "Home");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../images/down-arrow.svg":"b5nCi","prop-types":"7wKI2","../images/Default_Enter_a_creative_world_where_the_pet_industry_meets_co_0.jpg":"3y4Xc","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"b5nCi":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../images/down-arrow.svg":"b5nCi","prop-types":"7wKI2","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","../images/Default_Enter_a_creative_world_where_the_pet_industry_meets_co_0.jpg":"3y4Xc"}],"b5nCi":[function(require,module,exports) {
 module.exports = require("./helpers/bundle-url").getBundleURL("bLxZJ") + "down-arrow.1037091f.svg" + "?" + Date.now();
 
 },{"./helpers/bundle-url":"lgJ39"}],"3y4Xc":[function(require,module,exports) {
