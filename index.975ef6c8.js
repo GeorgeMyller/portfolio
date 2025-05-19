@@ -27270,146 +27270,119 @@ const About = ()=>{
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("section", {
         className: "padding",
         id: "about",
-        children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                className: "background",
-                src: (0, _defaultCrieUmImagemLandscapeSobreBilogiaEmTransioPar0JpgDefault.default),
-                alt: imageAltText
-            }, void 0, false, {
-                fileName: "src/Components/About.jsx",
-                lineNumber: 54,
-                columnNumber: 7
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                style: {
-                    backgroundColor: "var(--card-bg, white)",
-                    width: "min(95vw, 600px)",
-                    padding: "4rem 2rem",
-                    margin: "3rem auto",
-                    textAlign: "center",
-                    color: "var(--text-color, #222)",
-                    borderRadius: "16px",
-                    boxShadow: "0 2px 8px rgba(0,0,0,0.04)"
-                },
-                "aria-label": "Sobre mim",
-                children: [
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
-                        tabIndex: "0",
-                        children: "Sobre Mim"
-                    }, void 0, false, {
-                        fileName: "src/Components/About.jsx",
-                        lineNumber: 68,
-                        columnNumber: 9
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                        className: "large",
-                        children: description
-                    }, void 0, false, {
-                        fileName: "src/Components/About.jsx",
-                        lineNumber: 69,
-                        columnNumber: 9
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
-                        href: "/curriculo.pdf",
-                        download: true,
-                        style: {
-                            display: "inline-block",
-                            margin: "1rem 0",
-                            padding: "0.5rem 1.5rem",
-                            background: "#6c63ff",
-                            color: "#fff",
-                            borderRadius: "8px",
-                            textDecoration: "none",
-                            fontWeight: "bold",
-                            fontSize: "1rem",
-                            boxShadow: "0 1px 4px rgba(0,0,0,0.08)",
-                            transition: "background 0.2s"
-                        },
-                        "aria-label": "Baixar curr\xedculo em PDF",
-                        children: "Baixar Curr\xedculo"
-                    }, void 0, false, {
-                        fileName: "src/Components/About.jsx",
-                        lineNumber: 70,
-                        columnNumber: 9
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("hr", {}, void 0, false, {
-                        fileName: "src/Components/About.jsx",
-                        lineNumber: 90,
-                        columnNumber: 9
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
-                        style: {
-                            textAlign: "left",
-                            columns: 2,
-                            fontSize: "1.15rem",
-                            margin: "2rem 3rem",
-                            gap: "3rem",
-                            listStyle: "none",
-                            padding: 0
-                        },
-                        children: skillsList.map((skill)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
-                                tabIndex: "0",
-                                style: {
-                                    display: "flex",
-                                    alignItems: "center",
-                                    marginBottom: "0.5rem"
-                                },
-                                children: [
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                                        style: {
-                                            fontSize: "1.3rem",
-                                            marginRight: "0.5rem"
-                                        },
-                                        "aria-hidden": "true",
-                                        children: skill.icon
-                                    }, void 0, false, {
-                                        fileName: "src/Components/About.jsx",
-                                        lineNumber: 104,
-                                        columnNumber: 15
-                                    }, undefined),
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                                        children: skill.name
-                                    }, void 0, false, {
-                                        fileName: "src/Components/About.jsx",
-                                        lineNumber: 105,
-                                        columnNumber: 15
-                                    }, undefined)
-                                ]
-                            }, skill.name, true, {
-                                fileName: "src/Components/About.jsx",
-                                lineNumber: 103,
-                                columnNumber: 13
-                            }, undefined))
-                    }, void 0, false, {
-                        fileName: "src/Components/About.jsx",
-                        lineNumber: 91,
-                        columnNumber: 9
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("hr", {}, void 0, false, {
-                        fileName: "src/Components/About.jsx",
-                        lineNumber: 109,
-                        columnNumber: 9
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("blockquote", {
-                        style: {
-                            padding: "1rem 3rem 0",
-                            fontStyle: "italic",
-                            color: "#555"
-                        },
-                        children: detailOrQuote
-                    }, void 0, false, {
-                        fileName: "src/Components/About.jsx",
-                        lineNumber: 110,
-                        columnNumber: 9
-                    }, undefined)
-                ]
-            }, void 0, true, {
-                fileName: "src/Components/About.jsx",
-                lineNumber: 55,
-                columnNumber: 7
-            }, undefined)
-        ]
-    }, void 0, true, {
+        style: {
+            backgroundImage: `url(${(0, _defaultCrieUmImagemLandscapeSobreBilogiaEmTransioPar0JpgDefault.default)})`,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            backgroundRepeat: "no-repeat",
+            position: "relative"
+        },
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+            style: {
+                backgroundColor: "var(--card-bg, white)",
+                width: "min(95vw, 600px)",
+                padding: "4rem 2rem",
+                margin: "3rem auto",
+                textAlign: "center",
+                color: "var(--text-color, #222)",
+                borderRadius: "16px",
+                boxShadow: "0 2px 8px rgba(0,0,0,0.04)"
+            },
+            "aria-label": "Sobre mim",
+            children: [
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
+                    tabIndex: "0",
+                    children: "Sobre Mim"
+                }, void 0, false, {
+                    fileName: "src/Components/About.jsx",
+                    lineNumber: 77,
+                    columnNumber: 9
+                }, undefined),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                    className: "large",
+                    children: description
+                }, void 0, false, {
+                    fileName: "src/Components/About.jsx",
+                    lineNumber: 78,
+                    columnNumber: 9
+                }, undefined),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("hr", {}, void 0, false, {
+                    fileName: "src/Components/About.jsx",
+                    lineNumber: 99,
+                    columnNumber: 9
+                }, undefined),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
+                    style: {
+                        textAlign: "left",
+                        columns: 2,
+                        fontSize: "1.15rem",
+                        margin: "2rem 3rem",
+                        gap: "3rem",
+                        listStyle: "none",
+                        padding: 0
+                    },
+                    children: skillsList.map((skill)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                            tabIndex: "0",
+                            style: {
+                                display: "flex",
+                                alignItems: "center",
+                                marginBottom: "0.5rem"
+                            },
+                            children: [
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                    style: {
+                                        fontSize: "1.3rem",
+                                        marginRight: "0.5rem"
+                                    },
+                                    "aria-hidden": "true",
+                                    children: skill.icon
+                                }, void 0, false, {
+                                    fileName: "src/Components/About.jsx",
+                                    lineNumber: 113,
+                                    columnNumber: 15
+                                }, undefined),
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                    children: skill.name
+                                }, void 0, false, {
+                                    fileName: "src/Components/About.jsx",
+                                    lineNumber: 114,
+                                    columnNumber: 15
+                                }, undefined)
+                            ]
+                        }, skill.name, true, {
+                            fileName: "src/Components/About.jsx",
+                            lineNumber: 112,
+                            columnNumber: 13
+                        }, undefined))
+                }, void 0, false, {
+                    fileName: "src/Components/About.jsx",
+                    lineNumber: 100,
+                    columnNumber: 9
+                }, undefined),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("hr", {}, void 0, false, {
+                    fileName: "src/Components/About.jsx",
+                    lineNumber: 118,
+                    columnNumber: 9
+                }, undefined),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("blockquote", {
+                    style: {
+                        padding: "1rem 3rem 0",
+                        fontStyle: "italic",
+                        color: "#555"
+                    },
+                    children: detailOrQuote
+                }, void 0, false, {
+                    fileName: "src/Components/About.jsx",
+                    lineNumber: 119,
+                    columnNumber: 9
+                }, undefined)
+            ]
+        }, void 0, true, {
+            fileName: "src/Components/About.jsx",
+            lineNumber: 64,
+            columnNumber: 7
+        }, undefined)
+    }, void 0, false, {
         fileName: "src/Components/About.jsx",
         lineNumber: 53,
         columnNumber: 5
@@ -29031,7 +29004,7 @@ const imageAltText = "desktop with books and laptop";
         title: "groups_evo_crewai-escolher-envio-para-grupo-ou-para-meu-numero",
         description: "Bot para resumir mensagens de grupos do WhatsApp e permitir o envio para o grupo ou n\xfamero pessoal usando CrewAI.",
         url: "https://github.com/GeorgeMyller/groups_evo_crewai-escolher-envio-para-grupo-ou-para-meu-numero",
-        image: require("../images/Default_Enter_a_creative_world_where_the_pet_industry_meets_co_0-2.jpg"),
+        image: require("../images/Leonardo_Phoenix_10_A_vibrant_digital_illustration_featuring_a_3.jpg"),
         tech: [
             "Python",
             "CrewAI",
@@ -29040,26 +29013,39 @@ const imageAltText = "desktop with books and laptop";
         demo: ""
     },
     {
-        title: "move_to_ssd",
-        description: "Script Python para migrar pastas e aplicativos do macOS para SSD externo com symlinks autom\xe1ticos.",
-        url: "https://github.com/GeorgeMyller/move_to_ssd",
-        image: require("../images/Default_Imagine_a_world_where_the_office_is_not_just_a_place_f_0.jpg"),
-        tech: [
-            "Python",
-            "macOS",
-            "Symlinks"
-        ],
-        demo: ""
-    },
-    {
         title: "agenteinstagram",
         description: "Agente automatizado para postagens no Instagram com cria\xe7\xe3o de legendas automaticas e postagem do conte\xfado.",
         url: "https://github.com/GeorgeMyller/agenteinstagram",
-        image: require("../images/Default_Enter_a_creative_world_where_the_pet_industry_meets_co_1.jpg"),
+        image: require("../images/Leonardo_Phoenix_10_Create_an_image_representing_an_automated_1.jpg"),
         tech: [
             "Python",
             "Instagram API",
             "Automa\xe7\xe3o"
+        ],
+        demo: ""
+    },
+    {
+        title: "linkedinwriter",
+        description: "Ferramenta para automa\xe7\xe3o de cria\xe7\xe3o de conte\xfado e postagens no LinkedIn.",
+        url: "https://github.com/GeorgeMyller/linkedinwriter",
+        image: require("../images/Default_Enter_a_creative_world_where_the_pet_industry_meets_co_3.jpg"),
+        tech: [
+            "Python",
+            "LinkedIn API",
+            "Automa\xe7\xe3o"
+        ],
+        demo: ""
+    },
+    {
+        title: "DataAnalytics",
+        description: "Projeto de an\xe1lise de dados com Python, Pandas e visualiza\xe7\xe3o de dados. Inclui notebooks, scripts e exemplos para manipula\xe7\xe3o, limpeza e an\xe1lise explorat\xf3ria de dados.",
+        url: "https://github.com/GeorgeMyller/DataAnalytics",
+        image: require("../images/Default_Your_pet_reptile_has_always_been_your_source_of_inspir_1.jpg"),
+        tech: [
+            "Python",
+            "Pandas",
+            "Jupyter",
+            "DataViz"
         ],
         demo: ""
     },
@@ -29076,14 +29062,14 @@ const imageAltText = "desktop with books and laptop";
         demo: ""
     },
     {
-        title: "linkedinwriter",
-        description: "Ferramenta para automa\xe7\xe3o de cria\xe7\xe3o de conte\xfado e postagens no LinkedIn.",
-        url: "https://github.com/GeorgeMyller/linkedinwriter",
-        image: require("../images/Default_Enter_a_creative_world_where_the_pet_industry_meets_co_3.jpg"),
+        title: "move_to_ssd",
+        description: "Script Python para migrar pastas e aplicativos do macOS para SSD externo com symlinks autom\xe1ticos.",
+        url: "https://github.com/GeorgeMyller/move_to_ssd",
+        image: require("../images/Default_Imagine_a_world_where_the_office_is_not_just_a_place_f_0.jpg"),
         tech: [
             "Python",
-            "LinkedIn API",
-            "Automa\xe7\xe3o"
+            "macOS",
+            "Symlinks"
         ],
         demo: ""
     }, 
@@ -29100,148 +29086,137 @@ const Portfolio = ()=>{
                 children: "Portfolio"
             }, void 0, false, {
                 fileName: "src/Components/Portfolio.jsx",
-                lineNumber: 78,
+                lineNumber: 89,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                style: {
-                    display: "flex",
-                    flexDirection: "row",
-                    paddingTop: "3rem"
-                },
-                children: [
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        style: {
-                            maxWidth: "40%",
-                            alignSelf: "center"
-                        },
-                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                            src: (0, _defaultYourPetReptileHasAlwaysBeenYourSourceOfInspir0JpgDefault.default),
-                            style: {
-                                height: "90%",
-                                width: "100%",
-                                objectFit: "cover"
-                            },
-                            alt: imageAltText
-                        }, void 0, false, {
-                            fileName: "src/Components/Portfolio.jsx",
-                            lineNumber: 81,
-                            columnNumber: 11
-                        }, undefined)
-                    }, void 0, false, {
-                        fileName: "src/Components/Portfolio.jsx",
-                        lineNumber: 80,
-                        columnNumber: 9
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: "container portfolio-grid",
-                        children: projectList.map((project)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                className: "box project-card",
+                className: "container portfolio-grid",
+                children: projectList.map((project)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "box project-card",
+                        children: [
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
+                                href: project.url,
+                                target: "_blank",
+                                rel: "noopener noreferrer",
+                                "aria-label": `Ver código de ${project.title}`,
                                 children: [
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
-                                        href: project.url,
-                                        target: "_blank",
-                                        rel: "noopener noreferrer",
-                                        "aria-label": `Ver código de ${project.title}`,
-                                        children: [
-                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                                                src: project.image,
-                                                alt: `Imagem do projeto ${project.title}`,
-                                                className: "project-image",
-                                                loading: "lazy"
-                                            }, void 0, false, {
-                                                fileName: "src/Components/Portfolio.jsx",
-                                                lineNumber: 91,
-                                                columnNumber: 17
-                                            }, undefined),
-                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
-                                                children: project.title
-                                            }, void 0, false, {
-                                                fileName: "src/Components/Portfolio.jsx",
-                                                lineNumber: 92,
-                                                columnNumber: 17
-                                            }, undefined)
-                                        ]
-                                    }, void 0, true, {
-                                        fileName: "src/Components/Portfolio.jsx",
-                                        lineNumber: 90,
-                                        columnNumber: 15
-                                    }, undefined),
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                                        className: "small",
-                                        children: project.description
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                                        src: project.image,
+                                        alt: `Imagem do projeto ${project.title}`,
+                                        className: "project-image",
+                                        loading: "lazy"
                                     }, void 0, false, {
                                         fileName: "src/Components/Portfolio.jsx",
                                         lineNumber: 94,
                                         columnNumber: 15
                                     }, undefined),
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                        className: "tech-list",
-                                        children: project.tech.map((t)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                                                className: "tech-badge",
-                                                children: t
-                                            }, t, false, {
-                                                fileName: "src/Components/Portfolio.jsx",
-                                                lineNumber: 97,
-                                                columnNumber: 19
-                                            }, undefined))
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
+                                        children: project.title
                                     }, void 0, false, {
                                         fileName: "src/Components/Portfolio.jsx",
                                         lineNumber: 95,
                                         columnNumber: 15
-                                    }, undefined),
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                        className: "project-links",
-                                        children: [
-                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
-                                                href: project.url,
-                                                target: "_blank",
-                                                rel: "noopener noreferrer",
-                                                className: "project-btn",
-                                                children: "Ver c\xf3digo"
-                                            }, void 0, false, {
-                                                fileName: "src/Components/Portfolio.jsx",
-                                                lineNumber: 101,
-                                                columnNumber: 17
-                                            }, undefined),
-                                            project.demo && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
-                                                href: project.demo,
-                                                target: "_blank",
-                                                rel: "noopener noreferrer",
-                                                className: "project-btn",
-                                                children: "Demo"
-                                            }, void 0, false, {
-                                                fileName: "src/Components/Portfolio.jsx",
-                                                lineNumber: 103,
-                                                columnNumber: 19
-                                            }, undefined)
-                                        ]
-                                    }, void 0, true, {
-                                        fileName: "src/Components/Portfolio.jsx",
-                                        lineNumber: 100,
-                                        columnNumber: 15
                                     }, undefined)
                                 ]
-                            }, project.title, true, {
+                            }, void 0, true, {
                                 fileName: "src/Components/Portfolio.jsx",
-                                lineNumber: 89,
+                                lineNumber: 93,
                                 columnNumber: 13
-                            }, undefined))
-                    }, void 0, false, {
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                className: "small",
+                                children: project.description
+                            }, void 0, false, {
+                                fileName: "src/Components/Portfolio.jsx",
+                                lineNumber: 97,
+                                columnNumber: 13
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                className: "tech-list",
+                                children: project.tech.map((t)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                        className: "tech-badge",
+                                        children: t
+                                    }, t, false, {
+                                        fileName: "src/Components/Portfolio.jsx",
+                                        lineNumber: 100,
+                                        columnNumber: 17
+                                    }, undefined))
+                            }, void 0, false, {
+                                fileName: "src/Components/Portfolio.jsx",
+                                lineNumber: 98,
+                                columnNumber: 13
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                className: "project-links",
+                                children: [
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
+                                        href: project.url,
+                                        target: "_blank",
+                                        rel: "noopener noreferrer",
+                                        className: "project-btn",
+                                        children: "Ver c\xf3digo"
+                                    }, void 0, false, {
+                                        fileName: "src/Components/Portfolio.jsx",
+                                        lineNumber: 104,
+                                        columnNumber: 15
+                                    }, undefined),
+                                    project.demo && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
+                                        href: project.demo,
+                                        target: "_blank",
+                                        rel: "noopener noreferrer",
+                                        className: "project-btn",
+                                        children: "Demo"
+                                    }, void 0, false, {
+                                        fileName: "src/Components/Portfolio.jsx",
+                                        lineNumber: 106,
+                                        columnNumber: 17
+                                    }, undefined)
+                                ]
+                            }, void 0, true, {
+                                fileName: "src/Components/Portfolio.jsx",
+                                lineNumber: 103,
+                                columnNumber: 13
+                            }, undefined)
+                        ]
+                    }, project.title, true, {
                         fileName: "src/Components/Portfolio.jsx",
-                        lineNumber: 87,
-                        columnNumber: 9
-                    }, undefined)
-                ]
-            }, void 0, true, {
+                        lineNumber: 92,
+                        columnNumber: 11
+                    }, undefined))
+            }, void 0, false, {
                 fileName: "src/Components/Portfolio.jsx",
-                lineNumber: 79,
+                lineNumber: 90,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                style: {
+                    display: "flex",
+                    justifyContent: "center",
+                    paddingTop: "3rem"
+                },
+                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                    src: (0, _defaultYourPetReptileHasAlwaysBeenYourSourceOfInspir0JpgDefault.default),
+                    style: {
+                        height: "auto",
+                        width: "40%",
+                        objectFit: "cover",
+                        borderRadius: "8px"
+                    },
+                    alt: imageAltText
+                }, void 0, false, {
+                    fileName: "src/Components/Portfolio.jsx",
+                    lineNumber: 113,
+                    columnNumber: 9
+                }, undefined)
+            }, void 0, false, {
+                fileName: "src/Components/Portfolio.jsx",
+                lineNumber: 112,
                 columnNumber: 7
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/Components/Portfolio.jsx",
-        lineNumber: 77,
+        lineNumber: 88,
         columnNumber: 5
     }, undefined);
 };
@@ -29255,23 +29230,26 @@ $RefreshReg$(_c, "Portfolio");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../images/Default_Your_pet_reptile_has_always_been_your_source_of_inspir_0.jpg":"j1jFT","../images/Default_Enter_a_creative_world_where_the_pet_industry_meets_co_0-2.jpg":"9EG0r","../images/Default_Imagine_a_world_where_the_office_is_not_just_a_place_f_0.jpg":"8UwPB","../images/Default_Enter_a_creative_world_where_the_pet_industry_meets_co_1.jpg":"eJKN0","../images/Default_Enter_a_creative_world_where_the_pet_industry_meets_co_2.jpg":"eLub6","../images/Default_Enter_a_creative_world_where_the_pet_industry_meets_co_3.jpg":"cKK1F","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"j1jFT":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../images/Default_Enter_a_creative_world_where_the_pet_industry_meets_co_2.jpg":"eLub6","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","../images/Default_Your_pet_reptile_has_always_been_your_source_of_inspir_0.jpg":"j1jFT","../images/Leonardo_Phoenix_10_Create_an_image_representing_an_automated_1.jpg":"3N3ui","../images/Leonardo_Phoenix_10_A_vibrant_digital_illustration_featuring_a_3.jpg":"lbtyO","../images/Default_Enter_a_creative_world_where_the_pet_industry_meets_co_3.jpg":"cKK1F","../images/Default_Imagine_a_world_where_the_office_is_not_just_a_place_f_0.jpg":"8UwPB","../images/Default_Your_pet_reptile_has_always_been_your_source_of_inspir_1.jpg":"h7mzR"}],"eLub6":[function(require,module,exports) {
+module.exports = require("./helpers/bundle-url").getBundleURL("bLxZJ") + "Default_Enter_a_creative_world_where_the_pet_industry_meets_co_2.a730cf06.jpg" + "?" + Date.now();
+
+},{"./helpers/bundle-url":"lgJ39"}],"j1jFT":[function(require,module,exports) {
 module.exports = require("./helpers/bundle-url").getBundleURL("bLxZJ") + "Default_Your_pet_reptile_has_always_been_your_source_of_inspir_0.0e591c7e.jpg" + "?" + Date.now();
 
-},{"./helpers/bundle-url":"lgJ39"}],"9EG0r":[function(require,module,exports) {
-module.exports = require("./helpers/bundle-url").getBundleURL("bLxZJ") + "Default_Enter_a_creative_world_where_the_pet_industry_meets_co_0-2.881e34ec.jpg" + "?" + Date.now();
+},{"./helpers/bundle-url":"lgJ39"}],"3N3ui":[function(require,module,exports) {
+module.exports = require("./helpers/bundle-url").getBundleURL("bLxZJ") + "Leonardo_Phoenix_10_Create_an_image_representing_an_automated_1.71478afc.jpg" + "?" + Date.now();
+
+},{"./helpers/bundle-url":"lgJ39"}],"lbtyO":[function(require,module,exports) {
+module.exports = require("./helpers/bundle-url").getBundleURL("bLxZJ") + "Leonardo_Phoenix_10_A_vibrant_digital_illustration_featuring_a_3.2355e5ca.jpg" + "?" + Date.now();
+
+},{"./helpers/bundle-url":"lgJ39"}],"cKK1F":[function(require,module,exports) {
+module.exports = require("./helpers/bundle-url").getBundleURL("bLxZJ") + "Default_Enter_a_creative_world_where_the_pet_industry_meets_co_3.43105727.jpg" + "?" + Date.now();
 
 },{"./helpers/bundle-url":"lgJ39"}],"8UwPB":[function(require,module,exports) {
 module.exports = require("./helpers/bundle-url").getBundleURL("bLxZJ") + "Default_Imagine_a_world_where_the_office_is_not_just_a_place_f_0.1658b663.jpg" + "?" + Date.now();
 
-},{"./helpers/bundle-url":"lgJ39"}],"eJKN0":[function(require,module,exports) {
-module.exports = require("./helpers/bundle-url").getBundleURL("bLxZJ") + "Default_Enter_a_creative_world_where_the_pet_industry_meets_co_1.2696702b.jpg" + "?" + Date.now();
-
-},{"./helpers/bundle-url":"lgJ39"}],"eLub6":[function(require,module,exports) {
-module.exports = require("./helpers/bundle-url").getBundleURL("bLxZJ") + "Default_Enter_a_creative_world_where_the_pet_industry_meets_co_2.a730cf06.jpg" + "?" + Date.now();
-
-},{"./helpers/bundle-url":"lgJ39"}],"cKK1F":[function(require,module,exports) {
-module.exports = require("./helpers/bundle-url").getBundleURL("bLxZJ") + "Default_Enter_a_creative_world_where_the_pet_industry_meets_co_3.43105727.jpg" + "?" + Date.now();
+},{"./helpers/bundle-url":"lgJ39"}],"h7mzR":[function(require,module,exports) {
+module.exports = require("./helpers/bundle-url").getBundleURL("bLxZJ") + "Default_Your_pet_reptile_has_always_been_your_source_of_inspir_1.33b5be5e.jpg" + "?" + Date.now();
 
 },{"./helpers/bundle-url":"lgJ39"}],"lW6qc":[function() {},{}]},["1xC6H","ShInH","8lqZg"], "8lqZg", "parcelRequire6158")
 
