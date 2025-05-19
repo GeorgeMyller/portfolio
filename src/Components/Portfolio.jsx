@@ -109,6 +109,26 @@ const Portfolio = () => {
           </div>
         ))}
       </div>
+      {/* CTA Section */}
+      <div style={{ display: "flex", justifyContent: "center", marginTop: "2rem" }}>
+        <a
+          href="mailto:george.myller@ua.pt" // Substitua pelo seu e-mail ou link de contato
+          className="cta-btn"
+          style={{
+            background: "#007bff",
+            color: "#fff",
+            padding: "1rem 2.5rem",
+            borderRadius: "6px",
+            fontSize: "1.2rem",
+            fontWeight: "bold",
+            textDecoration: "none",
+            boxShadow: "0 2px 8px rgba(0,0,0,0.08)",
+            transition: "background 0.2s",
+          }}
+        >
+          Fale comigo
+        </a>
+      </div>
       <div style={{ display: "flex", justifyContent: "center", paddingTop: "3rem" }}>
         <img
           src={image}
