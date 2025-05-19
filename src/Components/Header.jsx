@@ -8,7 +8,7 @@ import React from "react";
 
 const Header = () => {
   return (
-    <div
+    <nav
       style={{
         position: "fixed",
         display: "flex",
@@ -19,13 +19,15 @@ const Header = () => {
         top: 0,
         width: "100%",
         zIndex: 10,
+        backdropFilter: "blur(6px)",
       }}
+      aria-label="Navegação principal"
     >
-      <a href="#home">Home</a>
-      <a href="#about">About</a>
-      <a href="#portfolio">Portfolio</a>
-      <a href="#footer">Contact</a>
-    </div>
+      <a href="#home" tabIndex="0">Home</a>
+      <a href="#about" tabIndex="0">About</a>
+      <a href="#portfolio" tabIndex="0">Portfolio</a>
+      <a href="#footer" tabIndex="0">Contact</a>
+    </nav>
   );
 };
 

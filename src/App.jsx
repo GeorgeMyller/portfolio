@@ -37,9 +37,37 @@ const siteProps = {
 const primaryColor = "#4E567E";
 const secondaryColor = "#D2F1E4";
 
+
+// Light/Dark mode toggle logic
+import { useEffect, useState } from "react";
+
 const App = () => {
+  const [theme, setTheme] = useState(() => {
+    if (typeof window !== "undefined") {
+      return localStorage.getItem("theme") || "light";
+    }
+    return "light";
+  });
+
+  useEffect(() => {
+    document.documentElement.setAttribute("data-theme", theme);
+    localStorage.setItem("theme", theme);
+  }, [theme]);
+
+  const toggleTheme = () => {
+    setTheme((prev) => (prev === "light" ? "dark" : "light"));
+  };
+
   return (
     <div id="main">
+      <button
+        className={`theme-toggle${theme === "dark" ? " dark" : ""}`}
+        onClick={toggleTheme}
+        aria-label={theme === "dark" ? "Ativar modo claro" : "Ativar modo escuro"}
+        title={theme === "dark" ? "Modo claro" : "Modo escuro"}
+      >
+        {theme === "dark" ? "🌙" : "☀️"}
+      </button>
       <Header />
       <Home name={siteProps.name} title={siteProps.title} />
       <About />

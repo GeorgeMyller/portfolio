@@ -29,11 +29,11 @@ const Home = ({ name, title }) => {
     <section id="home" className="min-height">
       <img className="background" src={image} alt={imageAltText} />
       <div style={{ position: "absolute", top: "5rem", left: "2rem", width: "20rem", color: "white" }}>
-        <h1>{name}</h1>
-        <h2>{title}</h2>
+        <h1 tabIndex="0">{name}</h1>
+        <h2 tabIndex="0">{title}</h2>
       </div>
-      <div style={{ position: "absolute", bottom: "3rem", left: "50%" }}>
-        <img src={arrowSvg} style={{ height: "3rem", width: "3rem" }} alt={imageAltText} />
+      <div style={{ position: "absolute", bottom: "3rem", left: "50%", transform: "translateX(-30%)" }}>
+        <img src={arrowSvg} style={{ height: "3rem", width: "3rem" }} alt="Seta para baixo, role para ver mais" />
       </div>
     </section>
   );

@@ -54,27 +54,31 @@ const About = () => {
       <img className="background" src={image} alt={imageAltText} />
       <div
         style={{
-          backgroundColor: "white",
-          width: "50%",
-          padding: "4rem",
+          backgroundColor: "var(--card-bg, white)",
+          width: "min(95vw, 600px)",
+          padding: "4rem 2rem",
           margin: "3rem auto",
           textAlign: "center",
+          color: "var(--text-color, #222)",
+          borderRadius: "16px",
+          boxShadow: "0 2px 8px rgba(0,0,0,0.04)",
         }}
       >
-        <h2>About Myself</h2>
+        <h2 tabIndex="0">About Myself</h2>
         <p className="large">{description}</p>
         <hr />
         <ul
           style={{
             textAlign: "left",
             columns: 2,
-            fontSize: "1.25rem",
+            fontSize: "1.15rem",
             margin: "2rem 3rem",
             gap: "3rem",
+            listStyle: "square inside",
           }}
         >
           {skillsList.map((skill) => (
-            <li key={skill}>{skill}</li>
+            <li key={skill} tabIndex="0">{skill}</li>
           ))}
         </ul>
         <hr />
