@@ -27090,6 +27090,7 @@ var _jsxDevRuntime = require("react/jsx-dev-runtime");
  * To contain application wide settings, routes, state, etc.
  */ var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
+var _i18N = require("./i18n");
 var _about = require("./Components/About");
 var _aboutDefault = parcelHelpers.interopDefault(_about);
 var _footer = require("./Components/Footer");
@@ -27100,9 +27101,8 @@ var _home = require("./Components/Home");
 var _homeDefault = parcelHelpers.interopDefault(_home);
 var _portfolio = require("./Components/Portfolio");
 var _portfolioDefault = parcelHelpers.interopDefault(_portfolio);
-var _i18N = require("./i18n");
 var _stylesCss = require("./styles.css");
-var _s = $RefreshSig$();
+var _s = $RefreshSig$(), _s1 = $RefreshSig$();
 /**
  * This object represents your information. The project is set so that you
  * only need to update these here, and values are passed a properties to the
@@ -27139,69 +27139,91 @@ const App = ()=>{
         setTheme((prev)=>prev === "light" ? "dark" : "light");
     };
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _i18N.LanguageProvider), {
-        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-            id: "main",
-            children: [
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                    className: `theme-toggle${theme === "dark" ? " dark" : ""}`,
-                    onClick: toggleTheme,
-                    "aria-label": theme === "dark" ? "Ativar modo claro" : "Ativar modo escuro",
-                    title: theme === "dark" ? "Modo claro" : "Modo escuro",
-                    children: theme === "dark" ? "\uD83C\uDF19" : "☀️"
-                }, void 0, false, {
-                    fileName: "src/App.jsx",
-                    lineNumber: 66,
-                    columnNumber: 9
-                }, undefined),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _headerDefault.default), {}, void 0, false, {
-                    fileName: "src/App.jsx",
-                    lineNumber: 74,
-                    columnNumber: 9
-                }, undefined),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _homeDefault.default), {
-                    name: siteProps.name,
-                    title: siteProps.title
-                }, void 0, false, {
-                    fileName: "src/App.jsx",
-                    lineNumber: 75,
-                    columnNumber: 9
-                }, undefined),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _aboutDefault.default), {}, void 0, false, {
-                    fileName: "src/App.jsx",
-                    lineNumber: 76,
-                    columnNumber: 9
-                }, undefined),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _portfolioDefault.default), {}, void 0, false, {
-                    fileName: "src/App.jsx",
-                    lineNumber: 77,
-                    columnNumber: 9
-                }, undefined),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _footerDefault.default), {
-                    ...siteProps,
-                    primaryColor: primaryColor,
-                    secondaryColor: secondaryColor
-                }, void 0, false, {
-                    fileName: "src/App.jsx",
-                    lineNumber: 78,
-                    columnNumber: 9
-                }, undefined)
-            ]
-        }, void 0, true, {
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(AppWithLang, {
+            theme: theme,
+            toggleTheme: toggleTheme,
+            siteProps: siteProps,
+            primaryColor: primaryColor,
+            secondaryColor: secondaryColor
+        }, void 0, false, {
             fileName: "src/App.jsx",
-            lineNumber: 65,
+            lineNumber: 66,
             columnNumber: 7
         }, undefined)
     }, void 0, false, {
         fileName: "src/App.jsx",
-        lineNumber: 64,
+        lineNumber: 65,
         columnNumber: 5
     }, undefined);
 };
 _s(App, "MY/h5u52ATRxLO8/32PnLmtb6Hw=");
 _c = App;
+const AppWithLang = ({ theme , toggleTheme , siteProps , primaryColor , secondaryColor  })=>{
+    _s1();
+    const { t  } = (0, _i18N.useLanguage)();
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        id: "main",
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                className: `theme-toggle${theme === "dark" ? " dark" : ""}`,
+                onClick: toggleTheme,
+                "aria-label": theme === "dark" ? t("themeLight") : t("themeDark"),
+                title: theme === "dark" ? t("themeLight") : t("themeDark"),
+                children: theme === "dark" ? "\uD83C\uDF19" : "☀️"
+            }, void 0, false, {
+                fileName: "src/App.jsx",
+                lineNumber: 76,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _headerDefault.default), {}, void 0, false, {
+                fileName: "src/App.jsx",
+                lineNumber: 84,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _homeDefault.default), {
+                name: siteProps.name,
+                title: siteProps.title
+            }, void 0, false, {
+                fileName: "src/App.jsx",
+                lineNumber: 85,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _aboutDefault.default), {}, void 0, false, {
+                fileName: "src/App.jsx",
+                lineNumber: 86,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _portfolioDefault.default), {}, void 0, false, {
+                fileName: "src/App.jsx",
+                lineNumber: 87,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _footerDefault.default), {
+                ...siteProps,
+                primaryColor: primaryColor,
+                secondaryColor: secondaryColor
+            }, void 0, false, {
+                fileName: "src/App.jsx",
+                lineNumber: 88,
+                columnNumber: 7
+            }, undefined)
+        ]
+    }, void 0, true, {
+        fileName: "src/App.jsx",
+        lineNumber: 75,
+        columnNumber: 5
+    }, undefined);
+};
+_s1(AppWithLang, "ot2YhC7pP10gRrIouBKIa40vomw=", false, function() {
+    return [
+        (0, _i18N.useLanguage)
+    ];
+});
+_c1 = AppWithLang;
 exports.default = App;
-var _c;
+var _c, _c1;
 $RefreshReg$(_c, "App");
+$RefreshReg$(_c1, "AppWithLang");
 
   $parcel$ReactRefreshHelpers$2430.postlude(module);
 } finally {
@@ -27614,6 +27636,7 @@ var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _reactDefault = parcelHelpers.interopDefault(_react);
 var _propTypes = require("prop-types");
 var _propTypesDefault = parcelHelpers.interopDefault(_propTypes);
+var _i18N = require("../i18n");
 var _devdottoSvg = require("../images/socials/devdotto.svg");
 var _devdottoSvgDefault = parcelHelpers.interopDefault(_devdottoSvg);
 var _envelopeSvg = require("../images/socials/envelope.svg");
@@ -27628,13 +27651,16 @@ var _twitterSvg = require("../images/socials/twitter.svg");
 var _twitterSvgDefault = parcelHelpers.interopDefault(_twitterSvg);
 var _youtubeSvg = require("../images/socials/youtube.svg");
 var _youtubeSvgDefault = parcelHelpers.interopDefault(_youtubeSvg);
+var _s = $RefreshSig$();
 /**
  * 💡 Learning resources
  *
  *  HTML hyperlinks: https://www.w3schools.com/html/html_links.asp
  *  Opening links in new tabs: https://www.freecodecamp.org/news/how-to-use-html-to-open-link-in-new-tab/
  */ const Footer = (props)=>{
+    _s();
     const { devDotTo , email , gitHub , instagram , linkedIn , medium , name , primaryColor , twitter , youTube ,  } = props;
+    const { t  } = (0, _i18N.useLanguage)();
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         id: "footer",
         style: {
@@ -27662,12 +27688,12 @@ var _youtubeSvgDefault = parcelHelpers.interopDefault(_youtubeSvg);
                             className: "socialIcon"
                         }, void 0, false, {
                             fileName: "src/Components/Footer.jsx",
-                            lineNumber: 64,
+                            lineNumber: 66,
                             columnNumber: 13
                         }, undefined)
                     }, void 0, false, {
                         fileName: "src/Components/Footer.jsx",
-                        lineNumber: 63,
+                        lineNumber: 65,
                         columnNumber: 11
                     }, undefined),
                     devDotTo && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
@@ -27680,12 +27706,12 @@ var _youtubeSvgDefault = parcelHelpers.interopDefault(_youtubeSvg);
                             className: "socialIcon"
                         }, void 0, false, {
                             fileName: "src/Components/Footer.jsx",
-                            lineNumber: 69,
+                            lineNumber: 71,
                             columnNumber: 13
                         }, undefined)
                     }, void 0, false, {
                         fileName: "src/Components/Footer.jsx",
-                        lineNumber: 68,
+                        lineNumber: 70,
                         columnNumber: 11
                     }, undefined),
                     gitHub && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
@@ -27698,12 +27724,12 @@ var _youtubeSvgDefault = parcelHelpers.interopDefault(_youtubeSvg);
                             className: "socialIcon"
                         }, void 0, false, {
                             fileName: "src/Components/Footer.jsx",
-                            lineNumber: 74,
+                            lineNumber: 76,
                             columnNumber: 13
                         }, undefined)
                     }, void 0, false, {
                         fileName: "src/Components/Footer.jsx",
-                        lineNumber: 73,
+                        lineNumber: 75,
                         columnNumber: 11
                     }, undefined),
                     instagram && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
@@ -27716,12 +27742,12 @@ var _youtubeSvgDefault = parcelHelpers.interopDefault(_youtubeSvg);
                             className: "socialIcon"
                         }, void 0, false, {
                             fileName: "src/Components/Footer.jsx",
-                            lineNumber: 83,
+                            lineNumber: 85,
                             columnNumber: 13
                         }, undefined)
                     }, void 0, false, {
                         fileName: "src/Components/Footer.jsx",
-                        lineNumber: 78,
+                        lineNumber: 80,
                         columnNumber: 11
                     }, undefined),
                     linkedIn && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
@@ -27734,12 +27760,12 @@ var _youtubeSvgDefault = parcelHelpers.interopDefault(_youtubeSvg);
                             className: "socialIcon"
                         }, void 0, false, {
                             fileName: "src/Components/Footer.jsx",
-                            lineNumber: 92,
+                            lineNumber: 94,
                             columnNumber: 13
                         }, undefined)
                     }, void 0, false, {
                         fileName: "src/Components/Footer.jsx",
-                        lineNumber: 87,
+                        lineNumber: 89,
                         columnNumber: 11
                     }, undefined),
                     medium && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
@@ -27752,12 +27778,12 @@ var _youtubeSvgDefault = parcelHelpers.interopDefault(_youtubeSvg);
                             className: "socialIcon"
                         }, void 0, false, {
                             fileName: "src/Components/Footer.jsx",
-                            lineNumber: 97,
+                            lineNumber: 99,
                             columnNumber: 13
                         }, undefined)
                     }, void 0, false, {
                         fileName: "src/Components/Footer.jsx",
-                        lineNumber: 96,
+                        lineNumber: 98,
                         columnNumber: 11
                     }, undefined),
                     twitter && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
@@ -27770,12 +27796,12 @@ var _youtubeSvgDefault = parcelHelpers.interopDefault(_youtubeSvg);
                             className: "socialIcon"
                         }, void 0, false, {
                             fileName: "src/Components/Footer.jsx",
-                            lineNumber: 102,
+                            lineNumber: 104,
                             columnNumber: 13
                         }, undefined)
                     }, void 0, false, {
                         fileName: "src/Components/Footer.jsx",
-                        lineNumber: 101,
+                        lineNumber: 103,
                         columnNumber: 11
                     }, undefined),
                     youTube && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
@@ -27788,18 +27814,18 @@ var _youtubeSvgDefault = parcelHelpers.interopDefault(_youtubeSvg);
                             className: "socialIcon"
                         }, void 0, false, {
                             fileName: "src/Components/Footer.jsx",
-                            lineNumber: 111,
+                            lineNumber: 113,
                             columnNumber: 13
                         }, undefined)
                     }, void 0, false, {
                         fileName: "src/Components/Footer.jsx",
-                        lineNumber: 106,
+                        lineNumber: 108,
                         columnNumber: 11
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/Components/Footer.jsx",
-                lineNumber: 55,
+                lineNumber: 57,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
@@ -27809,21 +27835,27 @@ var _youtubeSvgDefault = parcelHelpers.interopDefault(_youtubeSvg);
                     color: "white"
                 },
                 children: [
-                    "Created by ",
+                    t("footerCreatedBy"),
+                    " ",
                     name
                 ]
             }, void 0, true, {
                 fileName: "src/Components/Footer.jsx",
-                lineNumber: 115,
+                lineNumber: 117,
                 columnNumber: 7
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/Components/Footer.jsx",
-        lineNumber: 43,
+        lineNumber: 45,
         columnNumber: 5
     }, undefined);
 };
+_s(Footer, "ot2YhC7pP10gRrIouBKIa40vomw=", false, function() {
+    return [
+        (0, _i18N.useLanguage)
+    ];
+});
 _c = Footer;
 Footer.defaultProps = {
     name: ""
@@ -27849,7 +27881,7 @@ $RefreshReg$(_c, "Footer");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","prop-types":"7wKI2","../images/socials/devdotto.svg":"69cpV","../images/socials/envelope.svg":"92UhI","../images/socials/github.svg":"vP2m6","../images/socials/instagram.svg":"jH0VA","../images/socials/linkedin.svg":"5XSmz","../images/socials/twitter.svg":"flM6L","../images/socials/youtube.svg":"hmN7D","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"7wKI2":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","prop-types":"7wKI2","../images/socials/devdotto.svg":"69cpV","../images/socials/envelope.svg":"92UhI","../images/socials/github.svg":"vP2m6","../images/socials/instagram.svg":"jH0VA","../images/socials/linkedin.svg":"5XSmz","../images/socials/twitter.svg":"flM6L","../images/socials/youtube.svg":"hmN7D","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","../i18n":"b1niy"}],"7wKI2":[function(require,module,exports) {
 var ReactIs = require("react-is");
 // By explicitly using `prop-types` you are opting into new development behavior.
 // http://fb.me/prop-types-in-prod
@@ -28611,7 +28643,71 @@ module.exports = require("./helpers/bundle-url").getBundleURL("bLxZJ") + "twitte
 },{"./helpers/bundle-url":"lgJ39"}],"hmN7D":[function(require,module,exports) {
 module.exports = require("./helpers/bundle-url").getBundleURL("bLxZJ") + "youtube.c3557793.svg" + "?" + Date.now();
 
-},{"./helpers/bundle-url":"lgJ39"}],"9Dt2F":[function(require,module,exports) {
+},{"./helpers/bundle-url":"lgJ39"}],"b1niy":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$7695 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$7695.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "LanguageProvider", ()=>LanguageProvider);
+parcelHelpers.export(exports, "useLanguage", ()=>useLanguage);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _portfolioJson = require("./translations/pt-BR/portfolio.json");
+var _portfolioJsonDefault = parcelHelpers.interopDefault(_portfolioJson);
+var _portfolioJson1 = require("./translations/en/portfolio.json");
+var _portfolioJsonDefault1 = parcelHelpers.interopDefault(_portfolioJson1);
+var _s = $RefreshSig$(), _s1 = $RefreshSig$();
+const translations = {
+    "pt-BR": (0, _portfolioJsonDefault.default),
+    en: (0, _portfolioJsonDefault1.default)
+};
+const LanguageContext = /*#__PURE__*/ (0, _react.createContext)();
+const LanguageProvider = ({ children  })=>{
+    _s();
+    const [language, setLanguage] = (0, _react.useState)("pt-BR");
+    const t = (key)=>{
+        return translations[language][key] || key;
+    };
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(LanguageContext.Provider, {
+        value: {
+            language,
+            setLanguage,
+            t
+        },
+        children: children
+    }, void 0, false, {
+        fileName: "src/i18n.js",
+        lineNumber: 18,
+        columnNumber: 5
+    }, undefined);
+};
+_s(LanguageProvider, "AbUpOmHsmbmGIc+0FlUHZX/ahn0=");
+_c = LanguageProvider;
+const useLanguage = ()=>{
+    _s1();
+    return (0, _react.useContext)(LanguageContext);
+};
+_s1(useLanguage, "gDsCjeeItUuvgOWf1v4qoK9RF6k=");
+var _c;
+$RefreshReg$(_c, "LanguageProvider");
+
+  $parcel$ReactRefreshHelpers$7695.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","./translations/pt-BR/portfolio.json":"4Jzpd","./translations/en/portfolio.json":"a4IYb","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"4Jzpd":[function(require,module,exports) {
+module.exports = JSON.parse('{"portfolioTitle":"Portfolio","contactButton":"Fale comigo","contactMail":"mailto:george.myller@ua.pt","projectBtnCode":"Ver c\xf3digo","projectBtnDemo":"Demo","navHome":"In\xedcio","navAbout":"Sobre","navPortfolio":"Portf\xf3lio","navContact":"Contato","homeSubtitle":"Desenvolvedor de IA e solu\xe7\xf5es digitais inovadoras.","homeCta":"Ver Portf\xf3lio","aboutTitle":"Sobre Mim","aboutDescription":"Sou desenvolvedor de Agentes de IA, apaixonado por criar solu\xe7\xf5es inovadoras que transformam experi\xeancias digitais. Com forte atua\xe7\xe3o em Python, an\xe1lise de dados e machine learning, busco tornar a tecnologia acess\xedvel, \xe9tica e impactante para todos.","aboutSkillIA":"Desenvolvimento de Agentes de IA","aboutSkillData":"An\xe1lise de Dados","aboutSkillPython":"Programa\xe7\xe3o Python","aboutSkillML":"Machine Learning","aboutSkillNLP":"Processamento de Linguagem Natural","aboutSkillWeb":"Desenvolvimento Web","aboutQuote":"\\"Acredito que a tecnologia deve ser inclusiva, \xe9tica e criativa. Minha miss\xe3o \xe9 usar IA para resolver problemas reais e gerar impacto positivo na sociedade.\\"","footerCreatedBy":"Criado por","themeLight":"Ativar modo claro","themeDark":"Ativar modo escuro"}');
+
+},{}],"a4IYb":[function(require,module,exports) {
+module.exports = JSON.parse('{"portfolioTitle":"Portfolio","contactButton":"Contact me","contactMail":"mailto:george.myller@ua.pt","projectBtnCode":"View code","projectBtnDemo":"Demo","navHome":"Home","navAbout":"About","navPortfolio":"Portfolio","navContact":"Contact","homeSubtitle":"AI developer and innovative digital solutions.","homeCta":"View Portfolio","aboutTitle":"About Me","aboutDescription":"I am an AI Agent Developer passionate about creating innovative solutions that transform digital experiences. With strong skills in Python, data analysis, and machine learning, I strive to make technology accessible, ethical, and impactful for everyone.","aboutSkillIA":"AI Agent Development","aboutSkillData":"Data Analysis","aboutSkillPython":"Python Programming","aboutSkillML":"Machine Learning","aboutSkillNLP":"Natural Language Processing","aboutSkillWeb":"Web Development","aboutQuote":"\\"I believe technology should be inclusive, ethical, and creative. My mission is to use AI to solve real problems and generate positive impact in society.\\"","footerCreatedBy":"Created by","themeLight":"Switch to light mode","themeDark":"Switch to dark mode"}');
+
+},{}],"9Dt2F":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$2a62 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -28740,71 +28836,7 @@ $RefreshReg$(_c, "Header");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","../i18n":"b1niy"}],"b1niy":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$7695 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$7695.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "LanguageProvider", ()=>LanguageProvider);
-parcelHelpers.export(exports, "useLanguage", ()=>useLanguage);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _react = require("react");
-var _reactDefault = parcelHelpers.interopDefault(_react);
-var _portfolioJson = require("./translations/pt-BR/portfolio.json");
-var _portfolioJsonDefault = parcelHelpers.interopDefault(_portfolioJson);
-var _portfolioJson1 = require("./translations/en/portfolio.json");
-var _portfolioJsonDefault1 = parcelHelpers.interopDefault(_portfolioJson1);
-var _s = $RefreshSig$(), _s1 = $RefreshSig$();
-const translations = {
-    "pt-BR": (0, _portfolioJsonDefault.default),
-    en: (0, _portfolioJsonDefault1.default)
-};
-const LanguageContext = /*#__PURE__*/ (0, _react.createContext)();
-const LanguageProvider = ({ children  })=>{
-    _s();
-    const [language, setLanguage] = (0, _react.useState)("pt-BR");
-    const t = (key)=>{
-        return translations[language][key] || key;
-    };
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(LanguageContext.Provider, {
-        value: {
-            language,
-            setLanguage,
-            t
-        },
-        children: children
-    }, void 0, false, {
-        fileName: "src/i18n.js",
-        lineNumber: 18,
-        columnNumber: 5
-    }, undefined);
-};
-_s(LanguageProvider, "AbUpOmHsmbmGIc+0FlUHZX/ahn0=");
-_c = LanguageProvider;
-const useLanguage = ()=>{
-    _s1();
-    return (0, _react.useContext)(LanguageContext);
-};
-_s1(useLanguage, "gDsCjeeItUuvgOWf1v4qoK9RF6k=");
-var _c;
-$RefreshReg$(_c, "LanguageProvider");
-
-  $parcel$ReactRefreshHelpers$7695.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","./translations/pt-BR/portfolio.json":"4Jzpd","./translations/en/portfolio.json":"a4IYb","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"4Jzpd":[function(require,module,exports) {
-module.exports = JSON.parse('{"portfolioTitle":"Portfolio","contactButton":"Fale comigo","contactMail":"mailto:george.myller@ua.pt","projectBtnCode":"Ver c\xf3digo","projectBtnDemo":"Demo","navHome":"In\xedcio","navAbout":"Sobre","navPortfolio":"Portf\xf3lio","navContact":"Contato","homeSubtitle":"Desenvolvedor de IA e solu\xe7\xf5es digitais inovadoras.","homeCta":"Ver Portf\xf3lio","aboutTitle":"Sobre Mim","aboutDescription":"Sou desenvolvedor de Agentes de IA, apaixonado por criar solu\xe7\xf5es inovadoras que transformam experi\xeancias digitais. Com forte atua\xe7\xe3o em Python, an\xe1lise de dados e machine learning, busco tornar a tecnologia acess\xedvel, \xe9tica e impactante para todos.","aboutSkillIA":"Desenvolvimento de Agentes de IA","aboutSkillData":"An\xe1lise de Dados","aboutSkillPython":"Programa\xe7\xe3o Python","aboutSkillML":"Machine Learning","aboutSkillNLP":"Processamento de Linguagem Natural","aboutSkillWeb":"Desenvolvimento Web","aboutQuote":"\\"Acredito que a tecnologia deve ser inclusiva, \xe9tica e criativa. Minha miss\xe3o \xe9 usar IA para resolver problemas reais e gerar impacto positivo na sociedade.\\"","footerCreatedBy":"Criado por"}');
-
-},{}],"a4IYb":[function(require,module,exports) {
-module.exports = JSON.parse('{"portfolioTitle":"Portfolio","contactButton":"Contact me","contactMail":"mailto:george.myller@ua.pt","projectBtnCode":"View code","projectBtnDemo":"Demo","navHome":"Home","navAbout":"About","navPortfolio":"Portfolio","navContact":"Contact","homeSubtitle":"AI developer and innovative digital solutions.","homeCta":"View Portfolio","aboutTitle":"About Me","aboutDescription":"I am an AI Agent Developer passionate about creating innovative solutions that transform digital experiences. With strong skills in Python, data analysis, and machine learning, I strive to make technology accessible, ethical, and impactful for everyone.","aboutSkillIA":"AI Agent Development","aboutSkillData":"Data Analysis","aboutSkillPython":"Python Programming","aboutSkillML":"Machine Learning","aboutSkillNLP":"Natural Language Processing","aboutSkillWeb":"Web Development","aboutQuote":"\\"I believe technology should be inclusive, ethical, and creative. My mission is to use AI to solve real problems and generate positive impact in society.\\"","footerCreatedBy":"Created by"}');
-
-},{}],"jIEVO":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","../i18n":"b1niy"}],"jIEVO":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$0d4d = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -28821,10 +28853,12 @@ var _jsxDevRuntime = require("react/jsx-dev-runtime");
  * choice, name and title that describes your career focus.
  */ var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
+var _i18N = require("../i18n");
 var _downArrowSvg = require("../images/down-arrow.svg");
 var _downArrowSvgDefault = parcelHelpers.interopDefault(_downArrowSvg);
 var _propTypes = require("prop-types");
 var _propTypesDefault = parcelHelpers.interopDefault(_propTypes);
+var _s = $RefreshSig$();
 /**
  * Home background image
  *
@@ -28839,6 +28873,8 @@ var _propTypesDefault = parcelHelpers.interopDefault(_propTypes);
 const defaultImage = require("../images/Default_Enter_a_creative_world_where_the_pet_industry_meets_co_0.jpg");
 const defaultImageAlt = "Lizard with a window background, on front a computer";
 const Home = ({ name , title , image , imageAlt , subtitle , ctaText , ctaHref  })=>{
+    _s();
+    const { t  } = (0, _i18N.useLanguage)();
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("header", {
         id: "home",
         className: "min-height",
@@ -28867,7 +28903,7 @@ const Home = ({ name , title , image , imageAlt , subtitle , ctaText , ctaHref  
                 }
             }, void 0, false, {
                 fileName: "src/Components/Home.jsx",
-                lineNumber: 44,
+                lineNumber: 46,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -28883,7 +28919,7 @@ const Home = ({ name , title , image , imageAlt , subtitle , ctaText , ctaHref  
                 "aria-hidden": "true"
             }, void 0, false, {
                 fileName: "src/Components/Home.jsx",
-                lineNumber: 59,
+                lineNumber: 61,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -28917,7 +28953,7 @@ const Home = ({ name , title , image , imageAlt , subtitle , ctaText , ctaHref  
                         children: name
                     }, void 0, false, {
                         fileName: "src/Components/Home.jsx",
-                        lineNumber: 90,
+                        lineNumber: 92,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
@@ -28931,10 +28967,10 @@ const Home = ({ name , title , image , imageAlt , subtitle , ctaText , ctaHref  
                         children: title
                     }, void 0, false, {
                         fileName: "src/Components/Home.jsx",
-                        lineNumber: 103,
+                        lineNumber: 105,
                         columnNumber: 9
                     }, undefined),
-                    subtitle && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
                         style: {
                             fontSize: "1.15rem",
                             margin: "0 0 1.5rem 0",
@@ -28942,14 +28978,14 @@ const Home = ({ name , title , image , imageAlt , subtitle , ctaText , ctaHref  
                             fontWeight: 400,
                             textShadow: "0 1px 8px rgba(0,0,0,0.18)"
                         },
-                        children: subtitle
+                        children: subtitle || t("homeSubtitle")
                     }, void 0, false, {
                         fileName: "src/Components/Home.jsx",
-                        lineNumber: 115,
-                        columnNumber: 11
+                        lineNumber: 116,
+                        columnNumber: 9
                     }, undefined),
-                    ctaText && ctaHref && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
-                        href: ctaHref,
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
+                        href: ctaHref || "#portfolio",
                         style: {
                             display: "inline-block",
                             background: "#6c63ff",
@@ -28963,17 +28999,17 @@ const Home = ({ name , title , image , imageAlt , subtitle , ctaText , ctaHref  
                             boxShadow: "0 2px 8px rgba(0,0,0,0.10)",
                             transition: "background 0.2s"
                         },
-                        "aria-label": ctaText,
-                        children: ctaText
+                        "aria-label": ctaText || t("homeCta"),
+                        children: ctaText || t("homeCta")
                     }, void 0, false, {
                         fileName: "src/Components/Home.jsx",
-                        lineNumber: 128,
-                        columnNumber: 11
+                        lineNumber: 127,
+                        columnNumber: 9
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/Components/Home.jsx",
-                lineNumber: 72,
+                lineNumber: 74,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -28999,7 +29035,7 @@ const Home = ({ name , title , image , imageAlt , subtitle , ctaText , ctaHref  
                         alt: "Seta para baixo, role para ver mais"
                     }, void 0, false, {
                         fileName: "src/Components/Home.jsx",
-                        lineNumber: 163,
+                        lineNumber: 161,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("style", {
@@ -29027,22 +29063,27 @@ const Home = ({ name , title , image , imageAlt , subtitle , ctaText , ctaHref  
         `
                     }, void 0, false, {
                         fileName: "src/Components/Home.jsx",
-                        lineNumber: 168,
+                        lineNumber: 166,
                         columnNumber: 9
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/Components/Home.jsx",
-                lineNumber: 150,
+                lineNumber: 148,
                 columnNumber: 7
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/Components/Home.jsx",
-        lineNumber: 31,
+        lineNumber: 33,
         columnNumber: 5
     }, undefined);
 };
+_s(Home, "ot2YhC7pP10gRrIouBKIa40vomw=", false, function() {
+    return [
+        (0, _i18N.useLanguage)
+    ];
+});
 _c = Home;
 Home.defaultProps = {
     name: "",
@@ -29071,7 +29112,7 @@ $RefreshReg$(_c, "Home");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../images/down-arrow.svg":"b5nCi","prop-types":"7wKI2","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","../images/Default_Enter_a_creative_world_where_the_pet_industry_meets_co_0.jpg":"3y4Xc"}],"b5nCi":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../images/down-arrow.svg":"b5nCi","prop-types":"7wKI2","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","../images/Default_Enter_a_creative_world_where_the_pet_industry_meets_co_0.jpg":"3y4Xc","../i18n":"b1niy"}],"b5nCi":[function(require,module,exports) {
 module.exports = require("./helpers/bundle-url").getBundleURL("bLxZJ") + "down-arrow.1037091f.svg" + "?" + Date.now();
 
 },{"./helpers/bundle-url":"lgJ39"}],"3y4Xc":[function(require,module,exports) {
