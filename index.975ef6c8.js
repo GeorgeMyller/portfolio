@@ -28628,12 +28628,17 @@ var _jsxDevRuntime = require("react/jsx-dev-runtime");
  * user scrolls so that they can constantly reach any part of your page.
  */ var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
+var _i18N = require("../i18n");
+var _s = $RefreshSig$();
 const Header = ()=>{
+    _s();
+    const { language , setLanguage , t  } = (0, _i18N.useLanguage)();
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("nav", {
         style: {
             position: "fixed",
             display: "flex",
             justifyContent: "center",
+            alignItems: "center",
             gap: "2rem",
             background: "rgba(255,255,255,0.75)",
             padding: "1rem",
@@ -28647,46 +28652,84 @@ const Header = ()=>{
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
                 href: "#home",
                 tabIndex: "0",
-                children: "Home"
+                children: t("navHome")
             }, void 0, false, {
                 fileName: "src/Components/Header.jsx",
-                lineNumber: 26,
+                lineNumber: 29,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
                 href: "#about",
                 tabIndex: "0",
-                children: "About"
+                children: t("navAbout")
             }, void 0, false, {
                 fileName: "src/Components/Header.jsx",
-                lineNumber: 27,
+                lineNumber: 30,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
                 href: "#portfolio",
                 tabIndex: "0",
-                children: "Portfolio"
+                children: t("navPortfolio")
             }, void 0, false, {
                 fileName: "src/Components/Header.jsx",
-                lineNumber: 28,
+                lineNumber: 31,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
                 href: "#footer",
                 tabIndex: "0",
-                children: "Contact"
+                children: t("navContact")
             }, void 0, false, {
                 fileName: "src/Components/Header.jsx",
-                lineNumber: 29,
+                lineNumber: 32,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("select", {
+                value: language,
+                onChange: (e)=>setLanguage(e.target.value),
+                style: {
+                    marginLeft: "2rem",
+                    padding: "0.3rem 0.7rem",
+                    borderRadius: 4,
+                    border: "1px solid #ccc"
+                },
+                "aria-label": "Select language",
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("option", {
+                        value: "pt-BR",
+                        children: "Portugu\xeas"
+                    }, void 0, false, {
+                        fileName: "src/Components/Header.jsx",
+                        lineNumber: 39,
+                        columnNumber: 9
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("option", {
+                        value: "en",
+                        children: "English"
+                    }, void 0, false, {
+                        fileName: "src/Components/Header.jsx",
+                        lineNumber: 40,
+                        columnNumber: 9
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "src/Components/Header.jsx",
+                lineNumber: 33,
                 columnNumber: 7
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/Components/Header.jsx",
-        lineNumber: 11,
+        lineNumber: 13,
         columnNumber: 5
     }, undefined);
 };
+_s(Header, "z0NntALXVIUNQffs7k/d/KRa4Vk=", false, function() {
+    return [
+        (0, _i18N.useLanguage)
+    ];
+});
 _c = Header;
 exports.default = Header;
 var _c;
@@ -28697,7 +28740,71 @@ $RefreshReg$(_c, "Header");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"jIEVO":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","../i18n":"b1niy"}],"b1niy":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$7695 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$7695.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "LanguageProvider", ()=>LanguageProvider);
+parcelHelpers.export(exports, "useLanguage", ()=>useLanguage);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _portfolioJson = require("./translations/pt-BR/portfolio.json");
+var _portfolioJsonDefault = parcelHelpers.interopDefault(_portfolioJson);
+var _portfolioJson1 = require("./translations/en/portfolio.json");
+var _portfolioJsonDefault1 = parcelHelpers.interopDefault(_portfolioJson1);
+var _s = $RefreshSig$(), _s1 = $RefreshSig$();
+const translations = {
+    "pt-BR": (0, _portfolioJsonDefault.default),
+    en: (0, _portfolioJsonDefault1.default)
+};
+const LanguageContext = /*#__PURE__*/ (0, _react.createContext)();
+const LanguageProvider = ({ children  })=>{
+    _s();
+    const [language, setLanguage] = (0, _react.useState)("pt-BR");
+    const t = (key)=>{
+        return translations[language][key] || key;
+    };
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(LanguageContext.Provider, {
+        value: {
+            language,
+            setLanguage,
+            t
+        },
+        children: children
+    }, void 0, false, {
+        fileName: "src/i18n.js",
+        lineNumber: 18,
+        columnNumber: 5
+    }, undefined);
+};
+_s(LanguageProvider, "AbUpOmHsmbmGIc+0FlUHZX/ahn0=");
+_c = LanguageProvider;
+const useLanguage = ()=>{
+    _s1();
+    return (0, _react.useContext)(LanguageContext);
+};
+_s1(useLanguage, "gDsCjeeItUuvgOWf1v4qoK9RF6k=");
+var _c;
+$RefreshReg$(_c, "LanguageProvider");
+
+  $parcel$ReactRefreshHelpers$7695.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","./translations/pt-BR/portfolio.json":"4Jzpd","./translations/en/portfolio.json":"a4IYb","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"4Jzpd":[function(require,module,exports) {
+module.exports = JSON.parse('{"portfolioTitle":"Portfolio","contactButton":"Fale comigo","contactMail":"mailto:george.myller@ua.pt","projectBtnCode":"Ver c\xf3digo","projectBtnDemo":"Demo","navHome":"In\xedcio","navAbout":"Sobre","navPortfolio":"Portf\xf3lio","navContact":"Contato","homeSubtitle":"Desenvolvedor de IA e solu\xe7\xf5es digitais inovadoras.","homeCta":"Ver Portf\xf3lio","aboutTitle":"Sobre Mim","aboutDescription":"Sou desenvolvedor de Agentes de IA, apaixonado por criar solu\xe7\xf5es inovadoras que transformam experi\xeancias digitais. Com forte atua\xe7\xe3o em Python, an\xe1lise de dados e machine learning, busco tornar a tecnologia acess\xedvel, \xe9tica e impactante para todos.","aboutSkillIA":"Desenvolvimento de Agentes de IA","aboutSkillData":"An\xe1lise de Dados","aboutSkillPython":"Programa\xe7\xe3o Python","aboutSkillML":"Machine Learning","aboutSkillNLP":"Processamento de Linguagem Natural","aboutSkillWeb":"Desenvolvimento Web","aboutQuote":"\\"Acredito que a tecnologia deve ser inclusiva, \xe9tica e criativa. Minha miss\xe3o \xe9 usar IA para resolver problemas reais e gerar impacto positivo na sociedade.\\"","footerCreatedBy":"Criado por"}');
+
+},{}],"a4IYb":[function(require,module,exports) {
+module.exports = JSON.parse('{"portfolioTitle":"Portfolio","contactButton":"Contact me","contactMail":"mailto:george.myller@ua.pt","projectBtnCode":"View code","projectBtnDemo":"Demo","navHome":"Home","navAbout":"About","navPortfolio":"Portfolio","navContact":"Contact","homeSubtitle":"AI developer and innovative digital solutions.","homeCta":"View Portfolio","aboutTitle":"About Me","aboutDescription":"I am an AI Agent Developer passionate about creating innovative solutions that transform digital experiences. With strong skills in Python, data analysis, and machine learning, I strive to make technology accessible, ethical, and impactful for everyone.","aboutSkillIA":"AI Agent Development","aboutSkillData":"Data Analysis","aboutSkillPython":"Python Programming","aboutSkillML":"Machine Learning","aboutSkillNLP":"Natural Language Processing","aboutSkillWeb":"Web Development","aboutQuote":"\\"I believe technology should be inclusive, ethical, and creative. My mission is to use AI to solve real problems and generate positive impact in society.\\"","footerCreatedBy":"Created by"}');
+
+},{}],"jIEVO":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$0d4d = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -29341,70 +29448,6 @@ module.exports = require("./helpers/bundle-url").getBundleURL("bLxZJ") + "Defaul
 },{"./helpers/bundle-url":"lgJ39"}],"h7mzR":[function(require,module,exports) {
 module.exports = require("./helpers/bundle-url").getBundleURL("bLxZJ") + "Default_Your_pet_reptile_has_always_been_your_source_of_inspir_1.33b5be5e.jpg" + "?" + Date.now();
 
-},{"./helpers/bundle-url":"lgJ39"}],"b1niy":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$7695 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$7695.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "LanguageProvider", ()=>LanguageProvider);
-parcelHelpers.export(exports, "useLanguage", ()=>useLanguage);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _react = require("react");
-var _reactDefault = parcelHelpers.interopDefault(_react);
-var _portfolioJson = require("./translations/pt-BR/portfolio.json");
-var _portfolioJsonDefault = parcelHelpers.interopDefault(_portfolioJson);
-var _portfolioJson1 = require("./translations/en/portfolio.json");
-var _portfolioJsonDefault1 = parcelHelpers.interopDefault(_portfolioJson1);
-var _s = $RefreshSig$(), _s1 = $RefreshSig$();
-const translations = {
-    "pt-BR": (0, _portfolioJsonDefault.default),
-    en: (0, _portfolioJsonDefault1.default)
-};
-const LanguageContext = /*#__PURE__*/ (0, _react.createContext)();
-const LanguageProvider = ({ children  })=>{
-    _s();
-    const [language, setLanguage] = (0, _react.useState)("pt-BR");
-    const t = (key)=>{
-        return translations[language][key] || key;
-    };
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(LanguageContext.Provider, {
-        value: {
-            language,
-            setLanguage,
-            t
-        },
-        children: children
-    }, void 0, false, {
-        fileName: "src/i18n.js",
-        lineNumber: 18,
-        columnNumber: 5
-    }, undefined);
-};
-_s(LanguageProvider, "AbUpOmHsmbmGIc+0FlUHZX/ahn0=");
-_c = LanguageProvider;
-const useLanguage = ()=>{
-    _s1();
-    return (0, _react.useContext)(LanguageContext);
-};
-_s1(useLanguage, "gDsCjeeItUuvgOWf1v4qoK9RF6k=");
-var _c;
-$RefreshReg$(_c, "LanguageProvider");
-
-  $parcel$ReactRefreshHelpers$7695.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","./translations/pt-BR/portfolio.json":"4Jzpd","./translations/en/portfolio.json":"a4IYb","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"4Jzpd":[function(require,module,exports) {
-module.exports = JSON.parse('{"portfolioTitle":"Portfolio","contactButton":"Fale comigo","contactMail":"mailto:george.myller@ua.pt","projectBtnCode":"Ver c\xf3digo","projectBtnDemo":"Demo"}');
-
-},{}],"a4IYb":[function(require,module,exports) {
-module.exports = JSON.parse('{"portfolioTitle":"Portfolio","contactButton":"Contact me","contactMail":"mailto:george.myller@ua.pt","projectBtnCode":"View code","projectBtnDemo":"Demo"}');
-
-},{}],"lW6qc":[function() {},{}]},["1xC6H","ShInH","8lqZg"], "8lqZg", "parcelRequire6158")
+},{"./helpers/bundle-url":"lgJ39"}],"lW6qc":[function() {},{}]},["1xC6H","ShInH","8lqZg"], "8lqZg", "parcelRequire6158")
 
 //# sourceMappingURL=index.975ef6c8.js.map
