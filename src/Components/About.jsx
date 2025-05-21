@@ -5,6 +5,7 @@
  */
 
 import React from "react";
+import { useLanguage } from "../i18n";
 
 /**
  * About background image
@@ -20,35 +21,17 @@ import image from "../images/Default_crie_um_imagem_landscape_sobre_Bilogia_em_t
 
 const imageAltText = "purple and blue abstract background";
 
-/**
- * Sort description that expands on your title on the Home component.
- */
-const description =
-  "Sou desenvolvedor de Agentes de IA, apaixonado por criar soluções inovadoras que transformam experiências digitais. Com forte atuação em Python, análise de dados e machine learning, busco tornar a tecnologia acessível, ética e impactante para todos.";
-
-/**
- * List of some of skills or technologies you work on, are learning,
- * passionate about, or enjoy,
- */
 const skillsList = [
-  { name: "Desenvolvimento de Agentes de IA", icon: "🤖" },
-  { name: "Análise de Dados", icon: "📊" },
-  { name: "Programação Python", icon: "🐍" },
-  { name: "Machine Learning", icon: "🧠" },
-  { name: "Processamento de Linguagem Natural", icon: "💬" },
-  { name: "Desenvolvimento Web", icon: "🌐" },
+  { name: "aboutSkillIA", icon: "🤖" },
+  { name: "aboutSkillData", icon: "📊" },
+  { name: "aboutSkillPython", icon: "🐍" },
+  { name: "aboutSkillML", icon: "🧠" },
+  { name: "aboutSkillNLP", icon: "💬" },
+  { name: "aboutSkillWeb", icon: "🌐" },
 ];
 
-/**
- * Use this to give more information about what you are passionate about,
- * how you best work, or even a quote. This will help someone learn more
- * about you on a professional level.
- */
-const detailOrQuote =
-  "\"Acredito que a tecnologia deve ser inclusiva, ética e criativa. Minha missão é usar IA para resolver problemas reais e gerar impacto positivo na sociedade.\"";
-
-
 const About = () => {
+  const { t } = useLanguage();
   return (
     <section
       className="padding"
@@ -74,8 +57,8 @@ const About = () => {
         }}
         aria-label="Sobre mim"
       >
-        <h2 tabIndex="0">Sobre Mim</h2>
-        <p className="large">{description}</p>
+        <h2 tabIndex="0">{t("aboutTitle")}</h2>
+        <p className="large">{t("aboutDescription")}</p>
         {/* <a
           href="/curriculo.pdf"
           download
@@ -111,12 +94,12 @@ const About = () => {
           {skillsList.map((skill) => (
             <li key={skill.name} tabIndex="0" style={{ display: "flex", alignItems: "center", marginBottom: "0.5rem" }}>
               <span style={{ fontSize: "1.3rem", marginRight: "0.5rem" }} aria-hidden="true">{skill.icon}</span>
-              <span>{skill.name}</span>
+              <span>{t(skill.name)}</span>
             </li>
           ))}
         </ul>
         <hr />
-        <blockquote style={{ padding: "1rem 3rem 0", fontStyle: "italic", color: "#555" }}>{detailOrQuote}</blockquote>
+        <blockquote style={{ padding: "1rem 3rem 0", fontStyle: "italic", color: "#555" }}>{t("aboutQuote")}</blockquote>
       </div>
     </section>
   );

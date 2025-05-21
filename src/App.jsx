@@ -5,6 +5,7 @@
  */
 
 import React from "react";
+import { useLanguage } from "./i18n";
 
 
 import About from "./Components/About";
@@ -62,23 +63,32 @@ const App = () => {
 
   return (
     <LanguageProvider>
-      <div id="main">
-        <button
-          className={`theme-toggle${theme === "dark" ? " dark" : ""}`}
-          onClick={toggleTheme}
-          aria-label={theme === "dark" ? "Ativar modo claro" : "Ativar modo escuro"}
-          title={theme === "dark" ? "Modo claro" : "Modo escuro"}
-        >
-          {theme === "dark" ? "🌙" : "☀️"}
-        </button>
-        <Header />
-        <Home name={siteProps.name} title={siteProps.title} />
-        <About />
-        <Portfolio />
-        <Footer {...siteProps} primaryColor={primaryColor} secondaryColor={secondaryColor} />
-      </div>
+      <AppWithLang theme={theme} toggleTheme={toggleTheme} siteProps={siteProps} primaryColor={primaryColor} secondaryColor={secondaryColor} />
     </LanguageProvider>
   );
+
 };
+
+const AppWithLang = ({ theme, toggleTheme, siteProps, primaryColor, secondaryColor }) => {
+  const { t } = useLanguage();
+  return (
+    <div id="main">
+      <button
+        className={`theme-toggle${theme === "dark" ? " dark" : ""}`}
+        onClick={toggleTheme}
+        aria-label={theme === "dark" ? t("themeLight") : t("themeDark")}
+        title={theme === "dark" ? t("themeLight") : t("themeDark")}
+      >
+        {theme === "dark" ? "🌙" : "☀️"}
+      </button>
+      <Header />
+      <Home name={siteProps.name} title={siteProps.title} />
+      <About />
+      <Portfolio />
+      <Footer {...siteProps} primaryColor={primaryColor} secondaryColor={secondaryColor} />
+    </div>
+  );
+};
+
 
 export default App;

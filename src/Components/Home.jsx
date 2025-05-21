@@ -6,6 +6,7 @@
  */
 
 import React from "react";
+import { useLanguage } from "../i18n";
 import arrowSvg from "../images/down-arrow.svg";
 import PropTypes from "prop-types";
 
@@ -27,6 +28,7 @@ const defaultImageAlt = "Lizard with a window background, on front a computer";
 
 
 const Home = ({ name, title, image, imageAlt, subtitle, ctaText, ctaHref }) => {
+  const { t } = useLanguage();
   return (
     <header
       id="home"
@@ -111,40 +113,36 @@ const Home = ({ name, title, image, imageAlt, subtitle, ctaText, ctaHref }) => {
         >
           {title}
         </h2>
-        {subtitle && (
-          <p
-            style={{
-              fontSize: "1.15rem",
-              margin: "0 0 1.5rem 0",
-              color: "#e0e0e0",
-              fontWeight: 400,
-              textShadow: "0 1px 8px rgba(0,0,0,0.18)",
-            }}
-          >
-            {subtitle}
-          </p>
-        )}
-        {ctaText && ctaHref && (
-          <a
-            href={ctaHref}
-            style={{
-              display: "inline-block",
-              background: "#6c63ff",
-              color: "#fff",
-              borderRadius: "8px",
-              textDecoration: "none",
-              fontWeight: "bold",
-              fontSize: "1.1rem",
-              padding: "0.7rem 2.2rem",
-              marginTop: "0.5rem",
-              boxShadow: "0 2px 8px rgba(0,0,0,0.10)",
-              transition: "background 0.2s",
-            }}
-            aria-label={ctaText}
-          >
-            {ctaText}
-          </a>
-        )}
+        <p
+          style={{
+            fontSize: "1.15rem",
+            margin: "0 0 1.5rem 0",
+            color: "#e0e0e0",
+            fontWeight: 400,
+            textShadow: "0 1px 8px rgba(0,0,0,0.18)",
+          }}
+        >
+          {subtitle || t("homeSubtitle")}
+        </p>
+        <a
+          href={ctaHref || "#portfolio"}
+          style={{
+            display: "inline-block",
+            background: "#6c63ff",
+            color: "#fff",
+            borderRadius: "8px",
+            textDecoration: "none",
+            fontWeight: "bold",
+            fontSize: "1.1rem",
+            padding: "0.7rem 2.2rem",
+            marginTop: "0.5rem",
+            boxShadow: "0 2px 8px rgba(0,0,0,0.10)",
+            transition: "background 0.2s",
+          }}
+          aria-label={ctaText || t("homeCta")}
+        >
+          {ctaText || t("homeCta")}
+        </a>
       </div>
       {/* Seta animada */}
       <div

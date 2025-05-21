@@ -9,6 +9,7 @@
  */
 import React from "react";
 import PropTypes from "prop-types";
+import { useLanguage } from "../i18n";
 
 import devDotToIcon from "../images/socials/devdotto.svg";
 import envelopeIcon from "../images/socials/envelope.svg";
@@ -39,6 +40,7 @@ const Footer = (props) => {
     youTube,
   } = props;
 
+  const { t } = useLanguage();
   return (
     <div
       id="footer"
@@ -113,7 +115,7 @@ const Footer = (props) => {
         )}
       </div>
       <p className="small" style={{ marginTop: 0, color: "white" }}>
-        Created by {name}
+        {t("footerCreatedBy")} {name}
       </p>
     </div>
   );
